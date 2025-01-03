@@ -66,7 +66,7 @@ const Quiz = () => {
   const displayedStep = currentStep + 1 + (dynamicStep ? 1 : 0);
 
   return (
-    <div className="relative min-h-screen w-full bg-[radial-gradient(77.28%_53.46%_at_80.97%_37.09%,rgb(12,38,18)_0%,rgb(8,1,19)_100%)] flex flex-col items-center text-white">
+    <div className="relative  min-h-screen w-full bg-[radial-gradient(77.28%_53.46%_at_80.97%_37.09%,rgb(12,38,18)_0%,rgb(8,1,19)_100%)] flex flex-col items-center text-white">
       <HeaderQuiz
         currentStep={displayedStep}
         totalSteps={quizContent.length + 1}

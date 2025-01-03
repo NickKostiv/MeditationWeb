@@ -31,7 +31,7 @@ export default function QuizPageLoader() {
   }
 
   return (
-    <div className="relative h-screen w-full overflow-hidden bg-[radial-gradient(77.28%_53.46%_at_80.97%_37.09%,rgb(12,38,18)_0%,rgb(8,1,19)_100%)] flex flex-col items-center text-white">
+    <div className="relative  h-screen w-full overflow-hidden bg-[radial-gradient(77.28%_53.46%_at_80.97%_37.09%,rgb(12,38,18)_0%,rgb(8,1,19)_100%)] flex flex-col items-center text-white">
       <div className="max-w-[444px] h-screen w-full bg-black rounded-md text-center">
         <div className="mt-8">
           <Image src={QuizImage} alt="Quiz Image" className="w-full" />
