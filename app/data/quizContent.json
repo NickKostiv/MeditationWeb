@@ -1,0 +1,78 @@
+[
+  {
+    "step": 1,
+    "question": "How much do you know about chakras?",
+    "answers": [
+      { "type": "text", "content": "A lot" },
+      { "type": "text", "content": "A little bit" },
+      { "type": "text", "content": "I've heard about them, but that's it" },
+      { "type": "text", "content": "I don't know anything about this" }
+    ]
+  },
+  {
+    "step": 2,
+    "extraInfo": {
+      "title": "American Psychological Association's",
+      "content": "In so doing, the perspective offered by the chakra system model extends the accepted sequence of lifespan development by augmenting the present conceptual understanding..."
+    }
+  },
+  {
+    "step": 3,
+    "question": "How old are you?",
+    "answers": [
+      { "type": "text", "content": "18-27" },
+      { "type": "text", "content": "28-37" },
+      { "type": "text", "content": "38-47" },
+      { "type": "text", "content": "48-57" },
+      { "type": "text", "content": "58+" }
+    ]
+  },
+  {
+    "step": 4,
+    "question": "How balanced do you feel in your body, emotions, and thoughts?",
+    "answers": [
+      {
+        "content": "Not balanced"
+      },
+      {
+        "content": "Kind of balanced"
+      },
+      {
+        "content": "Pretty balanced"
+      },
+      {
+        "content": "Very balanced"
+      }
+    ]
+  },
+  {
+    "step": 5,
+    "question": "What part of your life feels stuck, or like it's not moving forward in the way you want?",
+    "answers": [
+      {
+        "content": "Health",
+        "image": "/table_health.webp"
+      },
+      {
+        "content": "Money",
+        "image": "/table_money.webp"
+      },
+      {
+        "content": "Career",
+        "image": "/table_career.webp"
+      },
+      {
+        "content": "Love",
+        "image": "/table_love.webp"
+      },
+      {
+        "content": "Spirituality",
+        "image": "/table_spirituality.webp"
+      },
+      {
+        "content": "Other",
+        "image": "/table_other.webp"
+      }
+    ]
+  }  
+]

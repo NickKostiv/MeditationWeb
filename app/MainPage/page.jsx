@@ -1,0 +1,84 @@
+import React from "react";
+import Header from "../components/Header";
+
+import { Montserrat } from "next/font/google";
+import Link from "next/link";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["100", "400", "500", "700"], // Додайте потрібні ваги
+  display: "swap", // Для плавного завантаження
+});
+
+export default function MainPage() {
+  return (
+    <>
+      <Header />
+
+      <section className=" montserrat.className relative h-screen w-full">
+        {/* Background */}
+        <div className="absolute inset-0">
+          {/* Відео для великих екранів */}
+          <video
+            className="hidden md:block absolute inset-0 w-full h-full object-cover"
+            autoPlay
+            loop
+            muted>
+            <source src="/background-image.mp4" type="video/mp4" />
+          </video>
+
+          {/* Зображення для маленьких екранів */}
+          <div
+            className="block md:hidden absolute inset-0 w-full h-full bg-cover bg-center"
+            style={{
+              backgroundImage: "url('/bg-img.png')",
+            }}></div>
+
+          {/* Затемнення */}
+          <div className="absolute hidden inset-0 bg-black bg-opacity-50 md:block"></div>
+        </div>
+
+        {/* Text Content */}
+        <div className="relative z-10 flex flex-col justify-end pb-[200px] items-center md:justify-center md:pb-0 text-center text-white h-full">
+          <h1 className="font-thin text-[12px] tracking-[4px] opacity-60 uppercase md:text-[20px]">
+            #1 MEDITATION APP
+          </h1>
+
+          <p
+            className="font-thin text-[34px] tracking-[0.5em] mt-[15px] text-center uppercase md:mt-[42px] 
+    xl:text-[100px] xl:tracking-[20px] md:text-[75px] sm:tracking-[0.5em] sm:mt-[22px] sm:pl-[10px]">
+            slowdive
+          </p>
+
+          <Link
+            href="/QuizPage"
+            className="backdrop-blur-[5px] bg-white/5 border border-white rounded-[50px] text-white font-thin  tracking-[3.2px] mt-[42px] opacity-70 md:px-[32px] md:py-[20px] px-[18px] py-[10px] text-[8px] uppercase transition-all duration-[600ms] ease-in-out">
+            Start Your Journey
+          </Link>
+        </div>
+
+        {/* Footer Section */}
+        <div className="absolute md:justify-around bottom-0 w-full flex justify-between px-[10px] md:px-[32px] pb-[75px]  text-center md:bg-shadow tracking-[3.2px] font-thin text-gray-300 text-opacity-60 ">
+          <div className="flex flex-col items-center">
+            <p className="text-[26px] md:text-[30px] ">4.9</p>
+            <p className="text-[12px] tracking-[1px] md:text-[16px] font-">
+              STORE RATING
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-[26px] md:text-[30px">20M+</p>
+            <p className="text-[12px] tracking-[1px] md:text-[16px] font-">
+              DOWNLOADS
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <p className="text-[26px] md:text-[30px] ">8000+</p>
+            <p className="text-[12px] tracking-[1px] md:text-[16px] lg:mt-2 ">
+              5-STAR REVIEWS
+            </p>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
