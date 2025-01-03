@@ -19,11 +19,18 @@ const GenericStep = ({ question, answers, onAnswerClick, selectedAnswer }) => {
           <button
             key={index}
             onClick={() => onAnswerClick(index)}
-            className={`w-full p-4 text-[16px] text-center font-normal rounded-md transition-all duration-300 ${
+            className={`flex items-center w-full p-4 text-[16px] text-center font-normal rounded-md transition-all duration-300 ${
               selectedAnswer === null || selectedAnswer === index
                 ? "bg-white text-black opacity-100"
                 : "bg-white text-black opacity-30"
             }`}>
+            {answer.image && (
+              <img
+                src={answer.image}
+                alt={answer.content}
+                className="w-[24px] h-[24px] mr-4 object-cover"
+              />
+            )}
             {answer.content}
           </button>
         ))}

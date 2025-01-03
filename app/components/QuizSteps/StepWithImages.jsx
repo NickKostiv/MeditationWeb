@@ -6,6 +6,7 @@ const StepWithImages = ({
   answers,
   onAnswerClick,
   selectedIndex,
+  currentStep,
 }) => {
   return (
     <div className="flex flex-col w-full items-center justify-start min-h-screen text-white px-4 pt-[15px] pb-[80px]">
@@ -45,7 +46,13 @@ const StepWithImages = ({
               />
               <span
                 className={`absolute text-lg font-semibold ${
-                  selectedIndex === index ? "text-black" : "text-white"
+                  currentStep === 5 // Логіка тільки для 5-го кроку
+                    ? selectedIndex === index
+                      ? "text-white opacity-100" // Білий текст при виборі
+                      : "text-white opacity-30" // Темно-білий текст за замовчуванням
+                    : selectedIndex === index
+                    ? "text-white" // Білий текст для вибраного варіанту на інших кроках
+                    : "text-white opacity-100" // Білий текст за замовчуванням
                 }`}>
                 {answer.content}
               </span>

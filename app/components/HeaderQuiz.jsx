@@ -8,7 +8,7 @@ const HeaderQuiz = ({ currentStep, totalSteps, onBack }) => {
   const progressPercentage = (currentStep / totalSteps) * 100;
 
   return (
-    <div className="flex flex-col w-full max-w-[650px] p-4  text-white">
+    <div className="flex flex-col w-full max-w-[540px] p-4  text-white">
       {/* Top Row */}
       <div className="flex items-center justify-between">
         {/* Back Button and Logo Section */}

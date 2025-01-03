@@ -31,18 +31,10 @@
     "step": 4,
     "question": "How balanced do you feel in your body, emotions, and thoughts?",
     "answers": [
-      {
-        "content": "Not balanced"
-      },
-      {
-        "content": "Kind of balanced"
-      },
-      {
-        "content": "Pretty balanced"
-      },
-      {
-        "content": "Very balanced"
-      }
+      { "content": "Not balanced" },
+      { "content": "Kind of balanced" },
+      { "content": "Pretty balanced" },
+      { "content": "Very balanced" }
     ]
   },
   {
@@ -52,28 +44,26 @@
       {
         "content": "Health",
         "image": "/table_health.webp",
-        "step6": {
-          "step": 6,
+        "nextStep": {
           "question": "How often do you feel physical symptoms like headache or body tension?",
           "answers": [
-            { "content": "Quite often" },
-            { "content": "Sometimes" },
-            { "content": "Rarely" },
-            { "content": "Never" }
+            { "content": "Quite often", "image": "/Melting.webp" },
+            { "content": "Sometimes", "image": "/🫢mouth.webp" },
+            { "content": "Rarely", "image": "/🙂Slightly-smiling-face.webp" },
+            { "content": "Never", "image": "/😮Exhaling-face.webp" }
           ]
         }
       },
       {
         "content": "Money",
         "image": "/table_money.webp",
-        "step6": {
-          "step": 6,
+        "nextStep": {
           "question": "What's your money attitude?",
           "answers": [
-            { "content": "Easy come, easy go" },
-            { "content": "I am afraid of losing money" },
-            { "content": "Money is the result of hard work" },
-            { "content": "Always running out of money" },
+            { "content": "Easy come, easy go", "image": "/🤑Money.webp"  },
+            { "content": "I am afraid of losing money", "image": "/😨Fearful-face.webp" },
+            { "content": "Money is the result of hard work", "image": "/😬Grimacingface.webp" },
+            { "content": "Always running out of money", "image": "/🫥Dotted-face.webp" },
             { "content": "Other" }
           ]
         }
@@ -81,8 +71,7 @@
       {
         "content": "Career",
         "image": "/table_career.webp",
-        "step6": {
-          "step": 6,
+        "nextStep": {
           "question": "Do you feel satisfied with your current career progress?",
           "answers": [
             { "content": "Yes, for sure" },
@@ -95,22 +84,21 @@
       {
         "content": "Love",
         "image": "/table_love.webp",
-        "step6": {
-          "step": 6,
+        "nextStep": {
           "question": "What does Love mean for you?",
           "answers": [
-            { "content": "It's about serving one another" },
-            { "content": "It's just a chemical process" },
-            { "content": "Love doesn’t exist" },
-            { "content": "Other" }
+            { "content": "It's about serving one another", "image": "/😇halo.webp" },
+            { "content": "It's just a chemical process", "image": "/🧪TestTube.webp" },
+            { "content": "Love doesn’t exist", "image": "/💔BrokenHeart.webp" },
+            { "content": "Love is a fundamental aspect of God", "image": "/🙏FoldedHands.webp" },
+            { "content": "Other", "image": "/🫥Dotted-face.webp" }
           ]
         }
       },
       {
         "content": "Spirituality",
         "image": "/table_spirituality.webp",
-        "step6": {
-          "step": 6,
+        "nextStep": {
           "question": "Do you believe that life has meaning?",
           "answers": [
             { "content": "Yes, for sure" },
@@ -123,36 +111,26 @@
       {
         "content": "Other",
         "image": "/table_other.webp",
-        "step6": {
-          "step": 6,
-          "question": "Do you often reflect on your life decisions?",
+        "nextStep": {
+          "question": "How often do you feel physical symptoms like headache or body tension?",
           "answers": [
-            { "content": "Quite often" },
-            { "content": "Sometimes" },
-            { "content": "Rarely" },
-            { "content": "Never" }
+            { "content": "Quite often", "image": "/Melting.webp" },
+            { "content": "Sometimes", "image": "/🫢mouth.webp" },
+            { "content": "Rarely", "image": "/🙂Slightly-smiling-face.webp" },
+            { "content": "Never", "image": "/😮Exhaling-face.webp" }
           ]
         }
       }
     ]
-  },
+  },  
   {
-    "step": 6,
-    "question": "Step 6",
+    "step": 7,
+    "question": "What is your current emotional state?",
     "answers": [
-      {
-        "content": "Not balanced"
-      },
-      {
-        "content": "Kind of balanced"
-      },
-      {
-        "content": "Pretty balanced"
-      },
-      {
-        "content": "Very balanced"
-      }
+      { "content": "Happy" },
+      { "content": "Sad" },
+      { "content": "Angry" },
+      { "content": "Anxious" }
     ]
   }
-  
 ]
