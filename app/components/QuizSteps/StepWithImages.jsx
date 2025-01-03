@@ -24,7 +24,6 @@ const StepWithImages = ({
         </h1>
       </div>
       <div className="w-full flex flex-wrap justify-center gap-4 items-center">
-        {/* Render each answer with its image */}
         {answers && answers.length > 0 ? (
           answers.map((answer, index) => (
             <button
@@ -46,13 +45,13 @@ const StepWithImages = ({
               />
               <span
                 className={`absolute text-lg font-semibold ${
-                  currentStep === 5 // Логіка тільки для 5-го кроку
+                  currentStep === 5
                     ? selectedIndex === index
-                      ? "text-white opacity-100" // Білий текст при виборі
-                      : "text-white opacity-30" // Темно-білий текст за замовчуванням
+                      ? "text-white opacity-100"
+                      : "text-white opacity-30"
                     : selectedIndex === index
-                    ? "text-white" // Білий текст для вибраного варіанту на інших кроках
-                    : "text-white opacity-100" // Білий текст за замовчуванням
+                    ? "text-white"
+                    : "text-white opacity-100"
                 }`}>
                 {answer.content}
               </span>

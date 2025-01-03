@@ -7,7 +7,6 @@ import Image from "next/image";
 const StepWithCustomImages = ({ question, onAnswerClick, selectedAnswer }) => {
   return (
     <div className="flex flex-col w-full items-center justify-start min-h-screen text-white px-4  pb-[80px]">
-      {/* Question */}
       <div className="flex flex-col mt-[15px] w-full max-w-[280px]">
         <h1
           className="text-[21px]  leading-[24px]  text-center mb-10"
@@ -22,9 +21,7 @@ const StepWithCustomImages = ({ question, onAnswerClick, selectedAnswer }) => {
         </h1>
       </div>
 
-      {/* Answer Buttons */}
       <div className="w-full flex flex-col items-center">
-        {/* Button 1 */}
         <button
           onClick={() => onAnswerClick(0)}
           className="relative w-full mb-[-18px] ml-[-40px] max-w-[250px] h-[100px] flex items-center justify-center bg-transparent transition-all duration-300">
@@ -50,7 +47,6 @@ const StepWithCustomImages = ({ question, onAnswerClick, selectedAnswer }) => {
           </span>
         </button>
 
-        {/* Button 2 */}
         <button
           onClick={() => onAnswerClick(1)}
           className="relative mb-[-15px] mr-[-20px] w-full max-w-[250px] h-[100px] flex items-center justify-center bg-transparent transition-all duration-300">
@@ -76,7 +72,6 @@ const StepWithCustomImages = ({ question, onAnswerClick, selectedAnswer }) => {
           </span>
         </button>
 
-        {/* Button 3 */}
         <button
           onClick={() => onAnswerClick(2)}
           className="relative mb-[-8px] ml-[-45px] w-full max-w-[250px] h-[100px] flex items-center justify-center bg-transparent transition-all duration-300">
@@ -102,7 +97,6 @@ const StepWithCustomImages = ({ question, onAnswerClick, selectedAnswer }) => {
           </span>
         </button>
 
-        {/* Button 4 */}
         <button
           onClick={() => onAnswerClick(3)}
           className="relative w-full max-w-[250px] h-[100px] flex items-center justify-center bg-transparent transition-all duration-300">
