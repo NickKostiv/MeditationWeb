@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import chakraImg from "path-to-your-image/chakraImg";
-import chakraImgBottom from "path-to-your-image/chakraImgBottom";
+import chakraImgBottom from "../../../public/chakras__bottom.png";
+import chakraImg from "../../../public/chakras__main.png";
 
 const Step2 = ({ onContinue }) => {
   return (

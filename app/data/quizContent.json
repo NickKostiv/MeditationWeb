@@ -51,28 +51,108 @@
     "answers": [
       {
         "content": "Health",
-        "image": "/table_health.webp"
+        "image": "/table_health.webp",
+        "step6": {
+          "step": 6,
+          "question": "How often do you feel physical symptoms like headache or body tension?",
+          "answers": [
+            { "content": "Quite often" },
+            { "content": "Sometimes" },
+            { "content": "Rarely" },
+            { "content": "Never" }
+          ]
+        }
       },
       {
         "content": "Money",
-        "image": "/table_money.webp"
+        "image": "/table_money.webp",
+        "step6": {
+          "step": 6,
+          "question": "What's your money attitude?",
+          "answers": [
+            { "content": "Easy come, easy go" },
+            { "content": "I am afraid of losing money" },
+            { "content": "Money is the result of hard work" },
+            { "content": "Always running out of money" },
+            { "content": "Other" }
+          ]
+        }
       },
       {
         "content": "Career",
-        "image": "/table_career.webp"
+        "image": "/table_career.webp",
+        "step6": {
+          "step": 6,
+          "question": "Do you feel satisfied with your current career progress?",
+          "answers": [
+            { "content": "Yes, for sure" },
+            { "content": "Sometimes" },
+            { "content": "Not really" },
+            { "content": "Prefer not to answer" }
+          ]
+        }
       },
       {
         "content": "Love",
-        "image": "/table_love.webp"
+        "image": "/table_love.webp",
+        "step6": {
+          "step": 6,
+          "question": "What does Love mean for you?",
+          "answers": [
+            { "content": "It's about serving one another" },
+            { "content": "It's just a chemical process" },
+            { "content": "Love doesn’t exist" },
+            { "content": "Other" }
+          ]
+        }
       },
       {
         "content": "Spirituality",
-        "image": "/table_spirituality.webp"
+        "image": "/table_spirituality.webp",
+        "step6": {
+          "step": 6,
+          "question": "Do you believe that life has meaning?",
+          "answers": [
+            { "content": "Yes, for sure" },
+            { "content": "Sometimes" },
+            { "content": "Not really" },
+            { "content": "Prefer not to answer" }
+          ]
+        }
       },
       {
         "content": "Other",
-        "image": "/table_other.webp"
+        "image": "/table_other.webp",
+        "step6": {
+          "step": 6,
+          "question": "Do you often reflect on your life decisions?",
+          "answers": [
+            { "content": "Quite often" },
+            { "content": "Sometimes" },
+            { "content": "Rarely" },
+            { "content": "Never" }
+          ]
+        }
       }
     ]
-  }  
+  },
+  {
+    "step": 6,
+    "question": "Step 6",
+    "answers": [
+      {
+        "content": "Not balanced"
+      },
+      {
+        "content": "Kind of balanced"
+      },
+      {
+        "content": "Pretty balanced"
+      },
+      {
+        "content": "Very balanced"
+      }
+    ]
+  }
+  
 ]
