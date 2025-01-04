@@ -44,93 +44,100 @@
       {
         "content": "Health",
         "image": "/table_health.webp",
-        "nextStep": {
+        "nextStep": 6,
+        "dynamicStep": {
           "question": "How often do you feel physical symptoms like headache or body tension?",
           "answers": [
-            { "content": "Quite often", "image": "/Melting.webp" },
-            { "content": "Sometimes", "image": "/🫢mouth.webp" },
-            { "content": "Rarely", "image": "/🙂Slightly-smiling-face.webp" },
-            { "content": "Never", "image": "/😮Exhaling-face.webp" }
+            { "content": "Quite often", "image": "/Melting.webp", "nextStep": 7 },
+            { "content": "Sometimes", "image": "/🫢mouth.webp", "nextStep": 7 },
+            { "content": "Rarely", "image": "/🙂Slightly-smiling-face.webp", "nextStep": 7 },
+            { "content": "Never", "image": "/😮Exhaling-face.webp", "nextStep": 7 }
           ]
         }
       },
       {
         "content": "Money",
         "image": "/table_money.webp",
-        "nextStep": {
+        "nextStep": 6,
+        "dynamicStep": {
           "question": "What's your money attitude?",
           "answers": [
-            { "content": "Easy come, easy go", "image": "/🤑Money.webp"  },
-            { "content": "I am afraid of losing money", "image": "/😨Fearful-face.webp" },
-            { "content": "Money is the result of hard work", "image": "/😬Grimacingface.webp" },
-            { "content": "Always running out of money", "image": "/🫥Dotted-face.webp" },
-            { "content": "Other" }
+            { "content": "Easy come, easy go", "image": "/🤑Money.webp", "nextStep": 7 },
+            { "content": "I am afraid of losing money", "image": "/😨Fearful-face.webp", "nextStep": 7 },
+            { "content": "Money is the result of hard work", "image": "/😬Grimacingface.webp", "nextStep": 7 },
+            { "content": "Always running out of money", "image": "/🫥Dotted-face.webp", "nextStep": 7 }
           ]
         }
       },
       {
         "content": "Career",
         "image": "/table_career.webp",
-        "nextStep": {
+        "nextStep": 6,
+        "dynamicStep": {
           "question": "Do you feel satisfied with your current career progress?",
           "answers": [
-            { "content": "Yes, for sure" },
-            { "content": "Sometimes" },
-            { "content": "Not really" },
-            { "content": "Prefer not to answer" }
+            { "content": "Yes, for sure", "nextStep": 7 },
+            { "content": "Sometimes", "nextStep": 7 },
+            { "content": "Not really", "nextStep": 7 },
+            { "content": "Prefer not to answer", "nextStep": 7 }
           ]
         }
       },
       {
         "content": "Love",
         "image": "/table_love.webp",
-        "nextStep": {
+        "nextStep": 6,
+        "dynamicStep": {
           "question": "What does Love mean for you?",
           "answers": [
-            { "content": "It's about serving one another", "image": "/😇halo.webp" },
-            { "content": "It's just a chemical process", "image": "/🧪TestTube.webp" },
-            { "content": "Love doesn’t exist", "image": "/💔BrokenHeart.webp" },
-            { "content": "Love is a fundamental aspect of God", "image": "/🙏FoldedHands.webp" },
-            { "content": "Other", "image": "/🫥Dotted-face.webp" }
+            { "content": "It's about serving one another", "image": "/😇halo.webp", "nextStep": 7 },
+            { "content": "It's just a chemical process", "image": "/🧪TestTube.webp", "nextStep": 7 },
+            { "content": "Love doesn’t exist", "image": "/💔BrokenHeart.webp", "nextStep": 7 },
+            { "content": "Love is a fundamental aspect of God", "image": "/🙏FoldedHands.webp", "nextStep": 7 }
           ]
         }
       },
       {
         "content": "Spirituality",
         "image": "/table_spirituality.webp",
-        "nextStep": {
+        "nextStep": 6,
+        "dynamicStep": {
           "question": "Do you believe that life has meaning?",
           "answers": [
-            { "content": "Yes, for sure" },
-            { "content": "Sometimes" },
-            { "content": "Not really" },
-            { "content": "Prefer not to answer" }
+            { "content": "Yes, for sure", "nextStep": 7 },
+            { "content": "Sometimes", "nextStep": 7 },
+            { "content": "Not really", "nextStep": 7 },
+            { "content": "Prefer not to answer", "nextStep": 7 }
           ]
         }
       },
       {
         "content": "Other",
         "image": "/table_other.webp",
-        "nextStep": {
+        "nextStep": 6,
+        "dynamicStep": {
           "question": "How often do you feel physical symptoms like headache or body tension?",
           "answers": [
-            { "content": "Quite often", "image": "/Melting.webp" },
-            { "content": "Sometimes", "image": "/🫢mouth.webp" },
-            { "content": "Rarely", "image": "/🙂Slightly-smiling-face.webp" },
-            { "content": "Never", "image": "/😮Exhaling-face.webp" }
+            { "content": "Quite often", "image": "/Melting.webp", "nextStep": 7 },
+            { "content": "Sometimes", "image": "/🫢mouth.webp", "nextStep": 7 },
+            { "content": "Rarely", "image": "/🙂Slightly-smiling-face.webp", "nextStep": 7 },
+            { "content": "Never", "image": "/😮Exhaling-face.webp", "nextStep": 7 }
           ]
         }
       }
     ]
-  },  
+  },
   {
     "step": 7,
-    "question": "What is your current emotional state?",
+    "type": "color-picker",
+    "question": "Which color do you like the most right now?",
     "answers": [
-      { "content": "Happy" },
-      { "content": "Sad" },
-      { "content": "Angry" },
-      { "content": "Anxious" }
+      { "content": "red", "color": "#ff4747" },
+      { "content": "yellow", "color": "#ffe047" },
+      { "content": "orange", "color": "#ff8c47" },
+      { "content": "blue", "color": "#477cff" },
+      { "content": "green", "color": "#47ff8c" },
+      { "content": "purple", "color": "#8c47ff" }
     ]
   }
 ]

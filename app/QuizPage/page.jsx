@@ -22,7 +22,7 @@ export default function QuizPageLoader() {
         }
         return prev + 1;
       });
-    }, 50);
+    }, 10);
     return () => clearInterval(interval);
   }, []);
 

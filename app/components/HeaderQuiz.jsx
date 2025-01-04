@@ -4,11 +4,12 @@ import React from "react";
 import Image from "next/image";
 import logo from "../../public/logo.gif";
 
-const HeaderQuiz = ({ currentStep, totalSteps, onBack }) => {
+const HeaderQuiz = ({ currentStep, onBack }) => {
+  const totalSteps = 22; // Загальна кількість кроків
   const progressPercentage = (currentStep / totalSteps) * 100;
 
   return (
-    <div className="flex flex-col w-full max-w-[540px] p-4  text-white">
+    <div className="flex flex-col w-full max-w-[540px] p-4 text-white">
       {/* Top Row */}
       <div className="flex items-center justify-between">
         {/* Back Button and Logo Section */}
@@ -35,7 +36,7 @@ const HeaderQuiz = ({ currentStep, totalSteps, onBack }) => {
       {/* Progress Bar */}
       <div className="w-full bg-gray-700 h-[3px] mt-4 rounded-full overflow-hidden">
         <div
-          className="bg-[#02bfb9] border-[1px] border-[#02bfb9]  transition-all duration-300"
+          className="bg-[#02bfb9] border-[1px] border-[#02bfb9] transition-all duration-300"
           style={{ width: `${progressPercentage}%` }}></div>
       </div>
     </div>
