@@ -14,7 +14,7 @@ const Step2 = ({ onContinue }) => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center w-full max-w-[540px]">
       {/* Зображення з анімацією fade-in */}
       <Image
         src={chakraImg}
@@ -26,7 +26,7 @@ const Step2 = ({ onContinue }) => {
       />
       {/* Заголовок з анімацією slide-up */}
       <h1
-        className="text-[26px] text-center font-semibold px-[10px]"
+        className="text-[24px] text-center font-semibold px-[30px]"
         style={{
           backgroundImage:
             "linear-gradient(98deg, #fff 34.56%, #27e2ef 79.62%)",
@@ -39,7 +39,7 @@ const Step2 = ({ onContinue }) => {
       </h1>
       {/* Текст з анімацією fade-up */}
       <p
-        className="text-[17px] font-normal text-gray-300 mb-4"
+        className="text-[17px] font-normal text-center mt-[10px] text-gray-300 mb-4"
         data-aos="fade-up">
         If these energy centers get blocked, <br />
         you may experience{" "}

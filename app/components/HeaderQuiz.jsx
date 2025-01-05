@@ -4,9 +4,8 @@ import React from "react";
 import Image from "next/image";
 import logo from "../../public/logo.gif";
 
-const HeaderQuiz = ({ currentStep, onBack }) => {
-  const totalSteps = 22; // Загальна кількість кроків
-  const progressPercentage = (currentStep / totalSteps) * 100;
+const HeaderQuiz = ({ currentStep, totalSteps = 22, onBack }) => {
+  const progressPercentage = ((currentStep - 1) / (totalSteps - 1)) * 100;
 
   return (
     <div className="flex flex-col w-full max-w-[540px] p-4 text-white">
@@ -16,12 +15,15 @@ const HeaderQuiz = ({ currentStep, onBack }) => {
         <div className="flex items-center gap-4">
           <button
             onClick={onBack}
-            className="text-white text-xl"
-            aria-label="Go back">
+            className={`text-white text-xl ${
+              currentStep === 1 ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+            aria-label="Go back"
+            disabled={currentStep === 1}>
             ←
           </button>
           <Image src={logo} alt="Logo" width={40} height={40} />
-          <div className="flex flex-col">
+          <div className="flex flex-col text-shadow">
             <span className="text-sm font-bold">Slowdive</span>
             <span className="text-xs text-gray-400">Meditation & Mantra</span>
           </div>
@@ -36,7 +38,7 @@ const HeaderQuiz = ({ currentStep, onBack }) => {
       {/* Progress Bar */}
       <div className="w-full bg-gray-700 h-[3px] mt-4 rounded-full overflow-hidden">
         <div
-          className="bg-[#02bfb9] border-[1px] border-[#02bfb9] transition-all duration-300"
+          className="bg-[#02bfb9] border-[1px] border-[#02bfb9] progress-bar"
           style={{ width: `${progressPercentage}%` }}></div>
       </div>
     </div>

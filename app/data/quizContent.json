@@ -1,12 +1,13 @@
 [
   {
     "step": 1,
+    "type": "text",
     "question": "How much do you know about chakras?",
     "answers": [
-      { "type": "text", "content": "A lot" },
-      { "type": "text", "content": "A little bit" },
-      { "type": "text", "content": "I've heard about them, but that's it" },
-      { "type": "text", "content": "I don't know anything about this" }
+      { "content": "A lot" },
+      { "content": "A little bit" },
+      { "content": "I've heard about them, but that's it" },
+      { "content": "I don't know anything about this" }
     ]
   },
   {
@@ -18,17 +19,19 @@
   },
   {
     "step": 3,
+    "type": "text",
     "question": "How old are you?",
     "answers": [
-      { "type": "text", "content": "18-27" },
-      { "type": "text", "content": "28-37" },
-      { "type": "text", "content": "38-47" },
-      { "type": "text", "content": "48-57" },
-      { "type": "text", "content": "58+" }
+      { "content": "18-27" },
+      { "content": "28-37" },
+      { "content": "38-47" },
+      { "content": "48-57" },
+      { "content": "58+" }
     ]
   },
   {
     "step": 4,
+    "type": "custom-images",
     "question": "How balanced do you feel in your body, emotions, and thoughts?",
     "answers": [
       { "content": "Not balanced" },
@@ -39,105 +42,96 @@
   },
   {
     "step": 5,
+    "type": "images",
     "question": "What part of your life feels stuck, or like it's not moving forward in the way you want?",
     "answers": [
+      { "content": "Health", "image": "/table_health.webp", "nextStep": 6 },
+      { "content": "Money", "image": "/table_money.webp", "nextStep": 6 },
+      { "content": "Career", "image": "/table_career.webp", "nextStep": 6 },
+      { "content": "Love", "image": "/table_love.webp", "nextStep": 6 },
+      { "content": "Spirituality", "image": "/table_spirituality.webp", "nextStep": 6 },
+      { "content": "Other", "image": "/table_other.webp", "nextStep": 6 }
+    ]
+  },
+  {
+    "step": 6,
+    "type": "text",
+    "questions": {
+      "Health": "How often do you feel physical symptoms like headache or body tension?",
+      "Money": "What's your money attitude?",
+      "Career": "Do you feel satisfied with your current career progress?",
+      "Love": "What does Love mean for you?",
+      "Spirituality": "Do you believe that life has meaning?",
+      "Other": "How often do you feel physical symptoms like headache or body tension?"
+    },
+    "answers": [
       {
-        "content": "Health",
-        "image": "/table_health.webp",
-        "nextStep": 6,
-        "dynamicStep": {
-          "question": "How often do you feel physical symptoms like headache or body tension?",
-          "answers": [
-            { "content": "Quite often", "image": "/Melting.webp", "nextStep": 7 },
-            { "content": "Sometimes", "image": "/🫢mouth.webp", "nextStep": 7 },
-            { "content": "Rarely", "image": "/🙂Slightly-smiling-face.webp", "nextStep": 7 },
-            { "content": "Never", "image": "/😮Exhaling-face.webp", "nextStep": 7 }
-          ]
-        }
+        "key": "Health",
+        "options": [
+          { "content": "Quite often", "image": "/Melting.webp", "nextStep": 7, "key": "QuiteOften" },
+          { "content": "Sometimes", "image": "/🫢mouth.webp", "nextStep": 7, "key": "Sometimes" },
+          { "content": "Rarely", "image": "/🙂Slightly-smiling-face.webp", "nextStep": 7, "key": "Rarely" },
+          { "content": "Never", "image": "/😮Exhaling-face.webp", "nextStep": 7, "key": "Never" }
+        ]
       },
       {
-        "content": "Money",
-        "image": "/table_money.webp",
-        "nextStep": 6,
-        "dynamicStep": {
-          "question": "What's your money attitude?",
-          "answers": [
-            { "content": "Easy come, easy go", "image": "/🤑Money.webp", "nextStep": 7 },
-            { "content": "I am afraid of losing money", "image": "/😨Fearful-face.webp", "nextStep": 7 },
-            { "content": "Money is the result of hard work", "image": "/😬Grimacingface.webp", "nextStep": 7 },
-            { "content": "Always running out of money", "image": "/🫥Dotted-face.webp", "nextStep": 7 }
-          ]
-        }
+        "key": "Money",
+        "options": [
+          { "content": "Easy come, easy go", "image": "/🤑Money.webp", "nextStep": 7, "key": "EasyComeEasyGo" },
+          { "content": "I am afraid of losing money", "image": "/😨Fearful-face.webp", "nextStep": 7, "key": "AfraidOfLosing" },
+          { "content": "Money is the result of hard work", "image": "/😬Grimacingface.webp", "nextStep": 7, "key": "HardWork" },
+          { "content": "Always running out of money", "image": "/🫥Dotted-face.webp", "nextStep": 7, "key": "RunningOut" }
+        ]
       },
       {
-        "content": "Career",
-        "image": "/table_career.webp",
-        "nextStep": 6,
-        "dynamicStep": {
-          "question": "Do you feel satisfied with your current career progress?",
-          "answers": [
-            { "content": "Yes, for sure", "nextStep": 7 },
-            { "content": "Sometimes", "nextStep": 7 },
-            { "content": "Not really", "nextStep": 7 },
-            { "content": "Prefer not to answer", "nextStep": 7 }
-          ]
-        }
+        "key": "Career",
+        "options": [
+          { "content": "Yes, for sure", "nextStep": 7, "key": "YesForSure" },
+          { "content": "Sometimes", "nextStep": 7, "key": "Sometimes" },
+          { "content": "Not really", "nextStep": 7, "key": "NotReally" },
+          { "content": "Prefer not to answer", "nextStep": 7, "key": "PreferNotToAnswer" }
+        ]
       },
       {
-        "content": "Love",
-        "image": "/table_love.webp",
-        "nextStep": 6,
-        "dynamicStep": {
-          "question": "What does Love mean for you?",
-          "answers": [
-            { "content": "It's about serving one another", "image": "/😇halo.webp", "nextStep": 7 },
-            { "content": "It's just a chemical process", "image": "/🧪TestTube.webp", "nextStep": 7 },
-            { "content": "Love doesn’t exist", "image": "/💔BrokenHeart.webp", "nextStep": 7 },
-            { "content": "Love is a fundamental aspect of God", "image": "/🙏FoldedHands.webp", "nextStep": 7 }
-          ]
-        }
+        "key": "Love",
+        "options": [
+          { "content": "It's about serving one another", "image": "/😇halo.webp", "nextStep": 7, "key": "ServingOneAnother" },
+          { "content": "It's just a chemical process", "image": "/🧪TestTube.webp", "nextStep": 7, "key": "ChemicalProcess" },
+          { "content": "Love doesn’t exist", "image": "/💔BrokenHeart.webp", "nextStep": 7, "key": "DoesNotExist" },
+          { "content": "Love is a fundamental aspect of God", "image": "/🙏FoldedHands.webp", "nextStep": 7, "key": "AspectOfGod" }
+        ]
       },
       {
-        "content": "Spirituality",
-        "image": "/table_spirituality.webp",
-        "nextStep": 6,
-        "dynamicStep": {
-          "question": "Do you believe that life has meaning?",
-          "answers": [
-            { "content": "Yes, for sure", "nextStep": 7 },
-            { "content": "Sometimes", "nextStep": 7 },
-            { "content": "Not really", "nextStep": 7 },
-            { "content": "Prefer not to answer", "nextStep": 7 }
-          ]
-        }
+        "key": "Spirituality",
+        "options": [
+          { "content": "Yes, for sure", "nextStep": 7, "key": "YesForSure" },
+          { "content": "Sometimes", "nextStep": 7, "key": "Sometimes" },
+          { "content": "Not really", "nextStep": 7, "key": "NotReally" },
+          { "content": "Prefer not to answer", "nextStep": 7, "key": "PreferNotToAnswer" }
+        ]
       },
       {
-        "content": "Other",
-        "image": "/table_other.webp",
-        "nextStep": 6,
-        "dynamicStep": {
-          "question": "How often do you feel physical symptoms like headache or body tension?",
-          "answers": [
-            { "content": "Quite often", "image": "/Melting.webp", "nextStep": 7 },
-            { "content": "Sometimes", "image": "/🫢mouth.webp", "nextStep": 7 },
-            { "content": "Rarely", "image": "/🙂Slightly-smiling-face.webp", "nextStep": 7 },
-            { "content": "Never", "image": "/😮Exhaling-face.webp", "nextStep": 7 }
-          ]
-        }
+        "key": "Other",
+        "options": [
+          { "content": "Quite often", "image": "/Melting.webp", "nextStep": 7, "key": "QuiteOften" },
+          { "content": "Sometimes", "image": "/🫢mouth.webp", "nextStep": 7, "key": "Sometimes" },
+          { "content": "Rarely", "image": "/🙂Slightly-smiling-face.webp", "nextStep": 7, "key": "Rarely" },
+          { "content": "Never", "image": "/😮Exhaling-face.webp", "nextStep": 7, "key": "Never" }
+        ]
       }
     ]
   },
   {
     "step": 7,
-    "type": "color-picker",
+    "type": "images",
     "question": "Which color do you like the most right now?",
     "answers": [
-      { "content": "red", "color": "#ff4747" },
-      { "content": "yellow", "color": "#ffe047" },
-      { "content": "orange", "color": "#ff8c47" },
-      { "content": "blue", "color": "#477cff" },
-      { "content": "green", "color": "#47ff8c" },
-      { "content": "purple", "color": "#8c47ff" }
+      { "content": "red", "color": "#FF0000" },
+      { "content": "yellow", "color": "#FFFF00" },
+      { "content": "orange", "color": "#FFA500" },
+      { "content": "blue", "color": "#0000FF" },
+      { "content": "green", "color": "#008000" },
+      { "content": "purple", "color": "#800080" }
     ]
   }
 ]

@@ -1,136 +1,167 @@
-"use client";
-
-import React, { useState, useEffect } from "react";
-import HeaderQuiz from "./HeaderQuiz";
-import quizContent from "../data/quizContent.json";
+import { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Cookies from "js-cookie";
+
+import stepsData from "../data/quizContent.json";
+import HeaderQuiz from "./HeaderQuiz";
 import Step2 from "./QuizSteps/Step2";
-import StepWithCustomImages from "./QuizSteps/StepWithCustomImages";
-import StepWithImages from "./QuizSteps/StepWithImages";
-import GenericStep from "./QuizSteps/GenericStep";
+import TypeText from "./QuizSteps/StepsTypes/TypeText";
+import TypeCustomImages from "./QuizSteps/StepsTypes/TypeCustomImages";
+import TypeImages from "./QuizSteps/StepsTypes/TypeImages";
 
-const Quiz = () => {
-  const [currentStep, setCurrentStep] = useState(0); // Поточний крок
-  const [savedAnswers, setSavedAnswers] = useState({}); // Збережені відповіді
-  const [dynamicStep, setDynamicStep] = useState(null); // Динамічний крок
+const StepRenderer = () => {
+  const [currentStep, setCurrentStep] = useState(1); // Start from the first step
+  const [selectedOptions, setSelectedOptions] = useState(() => {
+    // Load initial options from cookies if available
+    const savedOptions = Cookies.get("quizSelectedOptions");
+    return savedOptions ? JSON.parse(savedOptions) : {};
+  });
 
-  // Прокрутка до верху при зміні кроку
+  const totalSteps = stepsData.length;
+
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
+    AOS.init({
+      duration: 500,
+      easing: "ease-in-out",
     });
-  }, [currentStep]);
+  }, []);
 
-  const handleAnswerClick = (stepIndex, index) => {
-    // Save the selected answer
-    setSavedAnswers(prev => ({
-      ...prev,
-      [stepIndex]: index,
-    }));
+  const handleAnswerSelect = (answer, nextStep, key) => {
+    const updatedOptions = {
+      ...selectedOptions,
+      [currentStep]: { content: answer, key },
+    };
 
-    // Save to cookies
-    const stepKey = `step-${stepIndex + 1}`;
-    Cookies.set(
-      stepKey,
-      quizContent[stepIndex]?.answers[index]?.content || "",
-      { expires: 7 }
-    );
+    // Update state
+    setSelectedOptions(updatedOptions);
 
-    const current = dynamicStep || quizContent[stepIndex];
-    const selectedAnswer = current.answers[index];
+    // Save updated options to cookies
+    Cookies.set("quizSelectedOptions", JSON.stringify(updatedOptions), {
+      expires: 7, // Cookie will expire in 7 days
+    });
 
-    // Handle dynamic step if it exists
-    if (selectedAnswer?.dynamicStep) {
+    // Add a delay before transitioning to the next step
+    if (nextStep) {
       setTimeout(() => {
-        setDynamicStep(selectedAnswer.dynamicStep);
-      }, 500); // Add delay for smooth transition
-      return;
+        setCurrentStep(nextStep);
+      }, 500); // 500ms delay
     }
+  };
 
-    // If no dynamic step, check for `nextStep`
-    if (selectedAnswer?.nextStep) {
-      const nextStepIndex = quizContent.findIndex(
-        q => q.step === selectedAnswer.nextStep
+  const renderStep = step => {
+    const stepData = stepsData.find(s => s.step === step);
+
+    if (!stepData) return <div>Step not found</div>;
+
+    if (step === 6) {
+      const selectedKey = selectedOptions[5]?.content || "Health"; // Get selected key from step 5, default to "Health"
+      const question = stepData.questions[selectedKey];
+      const answers =
+        stepData.answers.find(a => a.key === selectedKey)?.options || [];
+
+      return (
+        <div className="p-4 w-full max-w-[550px]">
+          {question && (
+            <h1
+              className="text-[31px] font-bold leading-[34px] text-center mb-10"
+              style={{
+                backgroundImage:
+                  "linear-gradient(98deg, #fff 34.56%, #27e2ef 79.62%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}>
+              {question}
+            </h1>
+          )}
+          <TypeText
+            answers={answers}
+            onAnswerClick={index =>
+              handleAnswerSelect(
+                answers[index].content,
+                answers[index].nextStep,
+                index
+              )
+            }
+            selectedIndex={selectedOptions[6]?.key}
+          />
+        </div>
       );
-      if (nextStepIndex !== -1) {
-        setTimeout(() => {
-          setDynamicStep(null);
-          setCurrentStep(nextStepIndex);
-        }, 500);
-        return;
-      }
     }
 
-    // Default behavior: go to the next step
-    setTimeout(() => {
-      setDynamicStep(null);
-      setCurrentStep(prev => prev + 1);
-    }, 500);
+    return (
+      <div className="p-4 w-full max-w-[550px]">
+        {stepData.question && (
+          <h1
+            className="text-[31px] font-bold leading-[34px] text-center mb-10"
+            style={{
+              backgroundImage:
+                "linear-gradient(98deg, #fff 34.56%, #27e2ef 79.62%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}>
+            {stepData.question}
+          </h1>
+        )}
+        {stepData.type === "text" && (
+          <TypeText
+            answers={stepData.answers}
+            onAnswerClick={index =>
+              handleAnswerSelect(
+                stepData.answers[index].content,
+                stepData.answers[index].nextStep || currentStep + 1,
+                index
+              )
+            }
+            selectedIndex={selectedOptions[currentStep]?.key}
+          />
+        )}
+        {stepData.type === "custom-images" && (
+          <TypeCustomImages
+            onAnswerClick={index =>
+              handleAnswerSelect(
+                stepData.answers[index].content,
+                stepData.answers[index].nextStep || currentStep + 1,
+                index
+              )
+            }
+            selectedIndex={selectedOptions[currentStep]?.key}
+          />
+        )}
+        {stepData.type === "images" && (
+          <TypeImages
+            answers={stepData.answers}
+            onAnswerClick={index =>
+              handleAnswerSelect(
+                stepData.answers[index].content,
+                stepData.answers[index].nextStep || currentStep + 1,
+                index
+              )
+            }
+            selectedIndex={selectedOptions[currentStep]?.key}
+          />
+        )}
+        {step === 2 && (
+          <Step2 onContinue={() => setCurrentStep(currentStep + 1)} />
+        )}
+      </div>
+    );
   };
-
-  const handleBack = () => {
-    if (dynamicStep) {
-      setDynamicStep(null);
-    } else if (currentStep > 0) {
-      setCurrentStep(prev => prev - 1);
-    }
-  };
-
-  const totalSteps = quizContent.length + (dynamicStep ? 1 : 0);
-  const displayedStep = currentStep + 1 + (dynamicStep ? 1 : 0);
 
   return (
     <div className="relative min-h-screen w-full bg-[radial-gradient(77.28%_53.46%_at_80.97%_37.09%,rgb(12,38,18)_0%,rgb(8,1,19)_100%)] flex flex-col items-center text-white">
       <HeaderQuiz
-        currentStep={displayedStep}
+        currentStep={currentStep}
         totalSteps={totalSteps}
-        onBack={handleBack}
+        onBack={() => {
+          if (currentStep > 1) setCurrentStep(currentStep - 1);
+        }}
       />
-
-      <main className="flex min-h-screen max-w-[540px] flex-col items-center text-center w-full">
-        {dynamicStep ? (
-          <GenericStep
-            question={dynamicStep.question}
-            answers={dynamicStep.answers}
-            onAnswerClick={handleAnswerClick}
-            stepIndex={currentStep}
-            savedAnswers={savedAnswers}
-          />
-        ) : quizContent[currentStep]?.step === 2 ? (
-          <Step2
-            onContinue={() =>
-              setTimeout(() => setCurrentStep(prev => prev + 1), 500)
-            }
-          />
-        ) : quizContent[currentStep]?.step === 4 ? (
-          <StepWithCustomImages
-            question={quizContent[currentStep].question}
-            onAnswerClick={index => handleAnswerClick(currentStep, index)}
-            selectedAnswer={savedAnswers[currentStep]}
-          />
-        ) : quizContent[currentStep]?.step === 5 ? (
-          <StepWithImages
-            question={quizContent[currentStep].question}
-            answers={quizContent[currentStep].answers}
-            layout="columns"
-            onAnswerClick={index => handleAnswerClick(currentStep, index)}
-            selectedIndex={savedAnswers[currentStep]}
-          />
-        ) : quizContent[currentStep] ? (
-          <GenericStep
-            question={quizContent[currentStep]?.question}
-            answers={quizContent[currentStep]?.answers}
-            onAnswerClick={handleAnswerClick}
-            stepIndex={currentStep}
-            savedAnswers={savedAnswers}
-          />
-        ) : (
-          <div className="text-white">Invalid Step</div>
-        )}
-      </main>
+      {renderStep(currentStep)}
     </div>
   );
 };
 
-export default Quiz;
+export default StepRenderer;
