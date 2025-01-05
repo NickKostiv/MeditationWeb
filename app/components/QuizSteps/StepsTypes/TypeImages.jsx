@@ -12,7 +12,7 @@ const TypeImages = ({ answers, onAnswerClick, selectedIndex }) => {
     });
   }, []);
 
-  // Перевіряємо, чи всі відповіді мають поле `color`
+  // Check if the grid is for colors
   const isColorGrid = answers.every(answer => answer.color);
 
   return (
@@ -29,46 +29,51 @@ const TypeImages = ({ answers, onAnswerClick, selectedIndex }) => {
         data-aos="zoom-in" // Animation for buttons
       >
         {answers && answers.length > 0 ? (
-          answers.map((answer, index) => (
-            <button
-              key={index}
-              onClick={() => onAnswerClick(index)}
-              className={`relative ${
-                isColorGrid
-                  ? "w-full max-w-[100px] h-[100px]"
-                  : "w-[130px] h-[130px]"
-              } flex items-center justify-center transition-all duration-300 rounded-[17px] shadow-lg ${
-                selectedIndex === index
-                  ? "scale-110 border-4 border-white opacity-100" // Highlight selected
-                  : "opacity-50 hover:opacity-80" // Default dimmed
-              }`}
-              style={{ backgroundColor: answer.color || "transparent" }} // Apply color if available
-            >
-              {/* Show image if it exists */}
-              {answer.image && (
-                <Image
-                  src={answer.image}
-                  alt={answer.content}
-                  width={130}
-                  height={130}
-                  className="rounded-md"
-                />
-              )}
-              {/* Show content text only if there's no color */}
-              {!answer.color && (
-                <span
-                  className={`absolute text-lg font-semibold transition-all duration-300 ${
-                    selectedIndex === null
-                      ? "text-white opacity-100" // Default text
-                      : selectedIndex === index
-                      ? "text-white opacity-100" // Highlight selected text
-                      : "text-gray-400 opacity-100" // Dim unselected text
-                  }`}>
-                  {answer.content}
-                </span>
-              )}
-            </button>
-          ))
+          answers.map((answer, index) => {
+            const isSelected = selectedIndex === index; // Check if the current answer is selected
+            const hasSelection = selectedIndex !== undefined; // Check if any selection is made
+
+            return (
+              <button
+                key={index}
+                onClick={() => onAnswerClick(index)}
+                className={`relative ${
+                  isColorGrid
+                    ? "w-full max-w-[100px] h-[100px]"
+                    : "w-[130px] h-[130px]"
+                } flex items-center justify-center transition-all duration-300 rounded-[17px] shadow-lg ${
+                  isSelected
+                    ? "opacity-100 scale-110 border-4 border-white" // Highlight selected
+                    : hasSelection
+                    ? "opacity-50" // Dim unselected
+                    : "opacity-100 hover:opacity-80" // Default state
+                }`}
+                style={{ backgroundColor: answer.color || "transparent" }} // Apply color if available
+              >
+                {/* Show image if it exists */}
+                {answer.image && (
+                  <Image
+                    src={answer.image}
+                    alt={answer.content}
+                    width={130}
+                    height={130}
+                    className="rounded-md"
+                  />
+                )}
+                {/* Show content text only if there's no color */}
+                {!answer.color && (
+                  <span
+                    className={`absolute text-lg font-semibold transition-all duration-300 ${
+                      isSelected || !hasSelection
+                        ? "text-white opacity-100" // Default or selected text
+                        : "text-white opacity-50" // Dim unselected text
+                    }`}>
+                    {answer.content}
+                  </span>
+                )}
+              </button>
+            );
+          })
         ) : (
           <p className="text-white">No answers available</p>
         )}

@@ -68,7 +68,7 @@
       {
         "key": "Health",
         "options": [
-          { "content": "Quite often", "image": "/Melting.webp", "nextStep": 7, "key": "QuiteOften" },
+          { "content": "Quite often", "image": "/🫠Melting.webp", "nextStep": 7, "key": "QuiteOften" },
           { "content": "Sometimes", "image": "/🫢mouth.webp", "nextStep": 7, "key": "Sometimes" },
           { "content": "Rarely", "image": "/🙂Slightly-smiling-face.webp", "nextStep": 7, "key": "Rarely" },
           { "content": "Never", "image": "/😮Exhaling-face.webp", "nextStep": 7, "key": "Never" }
@@ -133,5 +133,85 @@
       { "content": "green", "color": "#008000" },
       { "content": "purple", "color": "#800080" }
     ]
+  },
+  {
+    "step": 8,
+    "type": "text-square",
+    "question": "Do you feel connected to nature or the universe?",
+    "answers": [
+      { "content": "A lot", "image": "/🌿Herb.webp", "nextStep": 9 },
+      { "content": "Sometimes", "image": "/🌞Sun.webp", "nextStep": 9 },
+      { "content": "Rarely", "image": "/🗿Moyai.webp", "nextStep": 9 },
+      { "content": "Not really", "image": "/🫥Dotted-face.webp", "nextStep": 9 }
+    ]
+  },
+  {
+    "step": 9,
+    "type": "images",
+    "question": "Which element do you like the most?",
+    "answers": [
+      { "content": "Earth", "image": "/table_earth.webp", "nextStep": 10 },
+      { "content": "Water", "image": "/table_water.webp", "nextStep": 10 },
+      { "content": "Fire", "image": "/table_fire.webp", "nextStep": 10 },
+      { "content": "Air", "image": "/table_air.webp", "nextStep": 10 },
+      { "content": "Space", "image": "/table_space.webp", "nextStep": 10 },
+      { "content": "Ether", "image": "/table_water.webp", "nextStep": 10 }
+    ]
+  },
+  {
+    "step": 10,
+    "type": "text",
+    "question": "Do you have a purpose in life?",
+    "answers": [
+      { "content": "Yes, for sure" },
+      { "content": "Sometimes" },
+      { "content": "No, I don’t think so" }
+    ]
+  },
+  {
+    "step": 11,
+    "type": "text",
+    "question": "What emotions do you find difficult to handle?",
+    "answers": [
+      { "content": "Anger", "image": "/🤬Anger.webp" },
+      { "content": "Fear", "image": "/😨Fearful-face.webp"},
+      { "content": "Anxiety", "image": "/😬Grimacingface.webp" },
+      { "content": "Sadness", "image": "/😒Unamusedface.webp" },
+      { "content": "Feeling insecure", "image": "/🫠Melting.webp"},
+      { "content": "Other", "image": "/😶Facewithoutmask.webp"}
+    ]
+  },
+  {
+    "step": 12,
+    "type": "text-square",
+    "question": "How often do you experience negative thoughts?",
+    "answers": [
+      { "content": "Never", "image": "/😇halo.webp"},
+      { "content": "Rarely", "image": "/🙂Slightly-smiling-face.webp"},
+      { "content": "Sometimes", "image": "/😪Sleepyface.webp"},
+      { "content": "Often", "image": "/🫣Face-with-peeking-eye.webp"}
+    ]
+  },
+  {
+    "step": 13,
+    "type": "text",
+    "question": "Have you gone through a challenging experience that has affected your energy?",
+    "answers": [
+      { "content": "Yes, more than one", "image": "/😒Unamusedface.webp" },
+      { "content": "Yes, one event", "image": "/😬Grimacingface.webp" },
+      { "content": "I don't think so,", "image": "/🙂Slightly-smiling-face.webp"}
+    ]
+  },
+  {
+    "step": 14,
+    "type": "text-square",
+    "question": "How often do you experience negative thoughts?",
+    "answers": [
+      { "content": "Yes, very easy", "image": "/😎Smiling-face-with-sunglasses.webp"},
+      { "content": "Sometimes", "image": "/🙂Slightly-smiling-face.webp"},
+      { "content": "Not really", "image": "/😔Sad-pensive-face.webp"},
+      { "content": "It's hard", "image": "/🫢mouth.webp"}
+    ]
   }
 ]
+

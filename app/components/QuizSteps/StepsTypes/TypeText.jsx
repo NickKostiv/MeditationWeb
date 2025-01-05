@@ -1,9 +1,14 @@
-import React from "react";
+const TypeText = ({ answers, onAnswerClick, selectedIndex, questionIndex }) => {
+  const getDynamicMargin = index => {
+    if (index === 11) return "md:mt-[30px]";
+    return "md:mt-[200px]";
+  };
 
-const TypeText = ({ answers, onAnswerClick, selectedIndex }) => {
   return (
     <div
-      className="flex flex-col w-full max-w-[550px] justify-center md:mt-[130px] text-white px-4 pt-[15px] pb-[80px]"
+      className={`flex flex-col w-full max-w-[550px] justify-center m-auto text-white px-4 pt-[15px] pb-[80px] ${getDynamicMargin(
+        questionIndex
+      )}`}
       data-aos="fade-in">
       <div className="space-y-4 w-full flex m-auto flex-col">
         {answers.map((answer, index) => {
@@ -23,7 +28,7 @@ const TypeText = ({ answers, onAnswerClick, selectedIndex }) => {
                     ? "bg-white text-black opacity-100 shadow-lg" // Highlight selected
                     : hasSelection
                     ? "bg-gray-300 text-black opacity-30" // Dim unselected
-                    : "bg-white text-black opacity-100 hover:shadow-lg" // Default
+                    : "bg-white text-black opacity-100 hover:shadow-lg font-medium" // Default
                 }`}>
                 {/* Conditionally render image if provided */}
                 {answer.image && (

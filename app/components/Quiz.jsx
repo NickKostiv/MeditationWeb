@@ -9,6 +9,7 @@ import Step2 from "./QuizSteps/Step2";
 import TypeText from "./QuizSteps/StepsTypes/TypeText";
 import TypeCustomImages from "./QuizSteps/StepsTypes/TypeCustomImages";
 import TypeImages from "./QuizSteps/StepsTypes/TypeImages";
+import TypeTextSquare from "./QuizSteps/StepsTypes/TypeTextSquare"; // Import TypeTextSquare
 
 const StepRenderer = () => {
   const [currentStep, setCurrentStep] = useState(1); // Start from the first step
@@ -91,10 +92,10 @@ const StepRenderer = () => {
     }
 
     return (
-      <div className="p-4 w-full max-w-[550px]">
+      <div className="py-4 px-[8px] w-full max-w-[550px]">
         {stepData.question && (
           <h1
-            className="text-[31px] font-bold leading-[34px] text-center mb-10"
+            className="text-[22px] leading-[21px] md:mt-[40px] md:text-[27px] font-semibold md:leading-[34px] text-center mb-10"
             style={{
               backgroundImage:
                 "linear-gradient(98deg, #fff 34.56%, #27e2ef 79.62%)",
@@ -116,6 +117,7 @@ const StepRenderer = () => {
               )
             }
             selectedIndex={selectedOptions[currentStep]?.key}
+            questionIndex={currentStep}
           />
         )}
         {stepData.type === "custom-images" && (
@@ -132,6 +134,19 @@ const StepRenderer = () => {
         )}
         {stepData.type === "images" && (
           <TypeImages
+            answers={stepData.answers}
+            onAnswerClick={index =>
+              handleAnswerSelect(
+                stepData.answers[index].content,
+                stepData.answers[index].nextStep || currentStep + 1,
+                index
+              )
+            }
+            selectedIndex={selectedOptions[currentStep]?.key}
+          />
+        )}
+        {stepData.type === "text-square" && (
+          <TypeTextSquare
             answers={stepData.answers}
             onAnswerClick={index =>
               handleAnswerSelect(
