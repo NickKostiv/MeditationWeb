@@ -47,7 +47,7 @@ const StepRenderer = () => {
     if (nextStep) {
       setTimeout(() => {
         setCurrentStep(nextStep);
-      }, 500);
+      }, 200);
     }
   };
 

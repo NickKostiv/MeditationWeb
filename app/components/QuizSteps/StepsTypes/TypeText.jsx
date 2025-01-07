@@ -23,7 +23,7 @@ const TypeText = ({ answers, onAnswerClick, selectedIndex, questionIndex }) => {
               data-aos-delay={index * 100}>
               <button
                 onClick={() => onAnswerClick(index)}
-                className={`flex items-center w-full p-4 text-[16px] text-left font-normal rounded-md transition-all duration-300 ${
+                className={`flex items-center w-full p-4 text-[14px] text-left font-medium rounded-md transition-all duration-300 ${
                   isSelected
                     ? "bg-white text-black opacity-100 shadow-lg"
                     : hasSelection

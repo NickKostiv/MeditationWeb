@@ -14,7 +14,7 @@ const AnalyzingPage = ({ onFinish }) => {
         }
         return prev + 5;
       });
-    }, 300);
+    }, 300000);
 
     return () => clearInterval(interval);
   }, []);
@@ -30,8 +30,8 @@ const AnalyzingPage = ({ onFinish }) => {
   }, [progress, onFinish]);
 
   return (
-    <div className="flex w-full max-w-[550px] flex-col items-center justify-end gap-[24px] pb-[25px] min-h-screen bg-transparent text-white">
-      <div className="mx-auto">
+    <div className="flex w-full max-w-[550px] flex-col items-center justify-end pb-[100px] gap-[24px] md:pb-[25px] min-h-screen bg-transparent text-white">
+      <div className="w-full max-w-[550px] mx-auto md:mx-0 md:my-0">
         <Image
           src={logo}
           alt="Logo"
@@ -74,27 +74,27 @@ const AnalyzingPage = ({ onFinish }) => {
             the most
           </p>
         </div>
-      </div>
-      <div className="w-full max-w-md mt-10 px-[20px]">
-        <div className="relative w-full h-12 bg-transparent border border-white rounded-full overflow-hidden flex items-center">
-          <div
-            className="h-full bg-teal-400"
-            style={{
-              width: `${progress}%`,
-              transition: "width 0.3s ease-in-out",
-            }}
-          />
+        <div className="mt-10 px-[15px] md:px-[20px]">
+          <div className="relative w-full h-[50px] bg-transparent border border-white rounded-[15px] overflow-hidden flex items-center">
+            <div
+              className="h-[50px] bg-teal-400"
+              style={{
+                width: `${progress}%`,
+                transition: "width 0.3s ease-in-out",
+              }}
+            />
 
-          <div
-            className="h-full bg-gray-700"
-            style={{
-              width: `${100 - progress}%`,
-              transition: "width 0.3s ease-in-out",
-            }}
-          />
+            <div
+              className="h-[50px] bg-gray-700"
+              style={{
+                width: `${100 - progress}%`,
+                transition: "width 0.3s ease-in-out",
+              }}
+            />
 
-          <div className="absolute w-full text-white font-semibold text-center">
-            Processing the answers
+            <div className="absolute w-full text-white font-semibold text-center">
+              Processing the answers
+            </div>
           </div>
         </div>
       </div>

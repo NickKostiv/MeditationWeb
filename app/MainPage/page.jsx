@@ -48,12 +48,12 @@ export default function MainPage() {
           </p>
           <button
             onClick={() => setShowQuiz(true)}
-            className="w-full max-w-[240px] md:max-w-[307px] text-[12px] md:text-[13px] backdrop-blur-[5px] bg-white/5 border border-white rounded-[50px] text-white font-thin tracking-[3.2px] mt-[42px] opacity-70  md:py-[11px] px-[6px] py-[10px] uppercase hover:text-white hover:opacity-100 transition-all duration-[600ms] ease-in-out">
+            className="w-full max-w-[240px] md:max-w-[248px] px-[12px] py-[14px] text-[12px] backdrop-blur-[15px] bg-white/5 border border-white rounded-[50px] text-white font-thin tracking-[3.2px] mt-[42px] opacity-100 md:opacity-70  uppercase hover:text-white hover:opacity-100 transition-all duration-[600ms] ease-in-out">
             Start Your Journey
           </button>
         </div>
 
-        <div className="absolute md:justify-around bottom-0 w-full flex justify-between px-[10px] md:px-[32px] pb-[75px] text-center md:bg-shadow tracking-[3.2px] font-thin text-gray-300 text-opacity-60">
+        <div className="absolute md:justify-around bottom-0 w-full flex justify-between px-[10px] md:px-[32px] pb-[75px] text-center md:bg-shadow tracking-[3.2px] font-thin text-white md:text-gray-300 md:text-opacity-60">
           <div className="flex flex-col items-center">
             <p className="text-[26px] md:text-[30px]">4.9</p>
             <p className="text-[12px] tracking-[1px] md:text-[16px]">
