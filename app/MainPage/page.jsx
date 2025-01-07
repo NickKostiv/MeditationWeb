@@ -12,10 +12,10 @@ const montserrat = Montserrat({
 });
 
 export default function MainPage() {
-  const [showQuiz, setShowQuiz] = useState(false); // Track if Quiz should show
+  const [showQuiz, setShowQuiz] = useState(false);
 
   if (showQuiz) {
-    return <QuizPageLoader />; // Render the QuizPageLoader if true
+    return <QuizPageLoader />;
   }
 
   return (
@@ -23,7 +23,6 @@ export default function MainPage() {
       <Header />
 
       <section className={`${montserrat.className} relative h-screen w-full`}>
-        {/* Background */}
         <div className="absolute inset-0">
           <video
             className="hidden md:block absolute inset-0 w-full h-full object-cover"
@@ -40,7 +39,6 @@ export default function MainPage() {
           <div className="absolute hidden inset-0 bg-black bg-opacity-50 md:block"></div>
         </div>
 
-        {/* Text Content */}
         <div className="relative z-10 flex flex-col justify-end pb-[200px] items-center md:justify-center md:pb-0 text-center text-white h-full">
           <h1 className="font-thin text-[12px] tracking-[4px] opacity-60 uppercase md:text-[20px]">
             #1 MEDITATION APP
@@ -49,13 +47,12 @@ export default function MainPage() {
             slowdive
           </p>
           <button
-            onClick={() => setShowQuiz(true)} // Trigger the quiz loader
+            onClick={() => setShowQuiz(true)}
             className="w-full max-w-[240px] md:max-w-[307px] text-[12px] md:text-[13px] backdrop-blur-[5px] bg-white/5 border border-white rounded-[50px] text-white font-thin tracking-[3.2px] mt-[42px] opacity-70  md:py-[11px] px-[6px] py-[10px] uppercase hover:text-white hover:opacity-100 transition-all duration-[600ms] ease-in-out">
             Start Your Journey
           </button>
         </div>
 
-        {/* Footer Section */}
         <div className="absolute md:justify-around bottom-0 w-full flex justify-between px-[10px] md:px-[32px] pb-[75px] text-center md:bg-shadow tracking-[3.2px] font-thin text-gray-300 text-opacity-60">
           <div className="flex flex-col items-center">
             <p className="text-[26px] md:text-[30px]">4.9</p>

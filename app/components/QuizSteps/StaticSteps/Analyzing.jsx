@@ -10,22 +10,22 @@ const AnalyzingPage = ({ onFinish }) => {
       setProgress(prev => {
         if (prev >= 100) {
           clearInterval(interval);
-          return 100; // Зупиняємося на 100%
+          return 100;
         }
-        return prev + 5; // Збільшуємо прогрес
+        return prev + 5;
       });
-    }, 300); // Інтервал у 300 мс
+    }, 300);
 
-    return () => clearInterval(interval); // Очищуємо інтервал при демонтажі
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
     if (progress >= 100) {
       const delay = setTimeout(() => {
-        onFinish(); // Викликаємо onFinish через 3 секунди
-      }, 3000); // Затримка в 3 секунди
+        onFinish();
+      }, 3000);
 
-      return () => clearTimeout(delay); // Очищуємо таймер при демонтажі
+      return () => clearTimeout(delay);
     }
   }, [progress, onFinish]);
 
@@ -77,7 +77,6 @@ const AnalyzingPage = ({ onFinish }) => {
       </div>
       <div className="w-full max-w-md mt-10 px-[20px]">
         <div className="relative w-full h-12 bg-transparent border border-white rounded-full overflow-hidden flex items-center">
-          {/* Прогрес-бар */}
           <div
             className="h-full bg-teal-400"
             style={{
@@ -85,7 +84,7 @@ const AnalyzingPage = ({ onFinish }) => {
               transition: "width 0.3s ease-in-out",
             }}
           />
-          {/* Темна частина */}
+
           <div
             className="h-full bg-gray-700"
             style={{
@@ -93,7 +92,7 @@ const AnalyzingPage = ({ onFinish }) => {
               transition: "width 0.3s ease-in-out",
             }}
           />
-          {/* Текст */}
+
           <div className="absolute w-full text-white font-semibold text-center">
             Processing the answers
           </div>

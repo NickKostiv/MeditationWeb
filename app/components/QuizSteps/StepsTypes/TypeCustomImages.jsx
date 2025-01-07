@@ -8,13 +8,12 @@ import "aos/dist/aos.css";
 const TypeCustomImages = ({ onAnswerClick, selectedIndex }) => {
   useEffect(() => {
     AOS.init({
-      duration: 500, // Animation duration
-      easing: "ease-in-out", // Animation easing
-      once: true, // Run animation only once
+      duration: 500,
+      easing: "ease-in-out",
+      once: true,
     });
   }, []);
 
-  // Array of image details
   const images = [
     { src: "/balance1.webp", alt: "Not balanced", width: 120, height: 75 },
     { src: "/balance2.webp", alt: "Kind of balanced", width: 126, height: 98 },
@@ -33,17 +32,16 @@ const TypeCustomImages = ({ onAnswerClick, selectedIndex }) => {
     { marginBottom: "-18px", rotate: "-12deg", extraMargin: "ml-[-40px]" },
     { marginBottom: "-15px", rotate: "4deg", extraMargin: "mr-[-20px]" },
     { marginBottom: "-8px", rotate: "-8deg", extraMargin: "ml-[-45px]" },
-    { marginBottom: "0px", rotate: "0deg", extraMargin: "" }, // No rotation for the last button
+    { marginBottom: "0px", rotate: "0deg", extraMargin: "" },
   ];
 
   return (
     <div
       className="flex flex-col w-full items-center justify-start min-h-screen text-white px-4 pb-[80px]"
-      data-aos="fade-in" // Animation for the container
-    >
+      data-aos="fade-in">
       <div className="w-full flex flex-col items-center">
         {images.map((image, index) => {
-          const isSelected = parseInt(selectedIndex, 10) === index; // Приводимо selectedIndex до числа
+          const isSelected = parseInt(selectedIndex, 10) === index;
           const hasSelection = selectedIndex !== undefined;
 
           return (
@@ -54,9 +52,8 @@ const TypeCustomImages = ({ onAnswerClick, selectedIndex }) => {
               style={{
                 marginBottom: buttonStyles[index].marginBottom,
               }}
-              data-aos="fade-up" // Animation for each button
-              data-aos-delay={index * 100} // Add delay for sequential animation
-            >
+              data-aos="fade-up"
+              data-aos-delay={index * 100}>
               <Image
                 src={image.src}
                 alt={image.alt}
@@ -64,10 +61,10 @@ const TypeCustomImages = ({ onAnswerClick, selectedIndex }) => {
                 height={image.height}
                 className={`rounded-md transition-all ${
                   isSelected
-                    ? "brightness-0 invert scale-105" // Highlight selected image
+                    ? "brightness-0 invert scale-105"
                     : hasSelection
-                    ? "opacity-50" // Dim non-selected images
-                    : "opacity-100 hover:scale-105" // Default appearance
+                    ? "opacity-50"
+                    : "opacity-100 hover:scale-105"
                 }`}
                 objectFit="contain"
               />

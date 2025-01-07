@@ -12,8 +12,8 @@ const TypeText = ({ answers, onAnswerClick, selectedIndex, questionIndex }) => {
       data-aos="fade-in">
       <div className="space-y-4 w-full flex m-auto flex-col">
         {answers.map((answer, index) => {
-          const isSelected = selectedIndex === index; // Порівняння індексу
-          const hasSelection = selectedIndex !== undefined; // Перевірка наявності вибору
+          const isSelected = selectedIndex === index;
+          const hasSelection = selectedIndex !== undefined;
 
           return (
             <div
@@ -22,13 +22,13 @@ const TypeText = ({ answers, onAnswerClick, selectedIndex, questionIndex }) => {
               data-aos="zoom-in"
               data-aos-delay={index * 100}>
               <button
-                onClick={() => onAnswerClick(index)} // Використання індексу
+                onClick={() => onAnswerClick(index)}
                 className={`flex items-center w-full p-4 text-[16px] text-left font-normal rounded-md transition-all duration-300 ${
                   isSelected
-                    ? "bg-white text-black opacity-100 shadow-lg" // Виділення вибраного
+                    ? "bg-white text-black opacity-100 shadow-lg"
                     : hasSelection
-                    ? "bg-gray-300 text-black opacity-30" // Затемнення невибраного
-                    : "bg-white text-black opacity-100 hover:shadow-lg font-medium" // Стандартний стиль
+                    ? "bg-gray-300 text-black opacity-30"
+                    : "bg-white text-black opacity-100 hover:shadow-lg font-medium"
                 }`}>
                 {answer.image && (
                   <img

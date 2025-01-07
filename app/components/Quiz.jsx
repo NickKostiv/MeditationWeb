@@ -169,13 +169,13 @@ const StepRenderer = () => {
               handleAnswerSelect(
                 stepData.answers[index].content,
                 stepData.answers[index].nextStep || currentStep + 1,
-                index, // Використовуємо індекс
+                index,
                 stepData.answers[index].score
               )
             }
             selectedIndex={
               selectedOptions[currentStep]?.key !== undefined
-                ? Number(selectedOptions[currentStep]?.key) // Приводимо до числа, якщо ключ — рядок
+                ? Number(selectedOptions[currentStep]?.key)
                 : undefined
             }
             questionIndex={currentStep}
@@ -188,13 +188,13 @@ const StepRenderer = () => {
               handleAnswerSelect(
                 stepData.answers[index].content,
                 stepData.answers[index].nextStep || currentStep + 1,
-                index, // Замість stepData.key використовуємо index
+                index,
                 stepData.answers[index].score
               )
             }
             selectedIndex={
               selectedOptions[currentStep]?.key !== undefined
-                ? parseInt(selectedOptions[currentStep]?.key, 10) // Приводимо ключ до числа
+                ? parseInt(selectedOptions[currentStep]?.key, 10)
                 : undefined
             }
           />
@@ -207,7 +207,7 @@ const StepRenderer = () => {
               handleAnswerSelect(
                 stepData.answers[index].content,
                 stepData.answers[index].nextStep || currentStep + 1,
-                index, // Передаємо index як ключ
+                index,
                 stepData.answers[index].score
               )
             }
@@ -226,14 +226,14 @@ const StepRenderer = () => {
               handleAnswerSelect(
                 stepData.answers[index].content,
                 stepData.answers[index].nextStep || currentStep + 1,
-                index, // Передаємо індекс як ключ
+                index,
                 stepData.answers[index].score
               )
             }
             selectedIndex={
               selectedOptions[currentStep]?.key !== undefined
-                ? Number(selectedOptions[currentStep]?.key) // Приводимо до числа, якщо ключ — рядок
-                : undefined // Якщо вибір не зроблено
+                ? Number(selectedOptions[currentStep]?.key)
+                : undefined
             }
           />
         )}

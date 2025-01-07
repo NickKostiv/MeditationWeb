@@ -149,41 +149,39 @@ const chakraItems = [
 
 const ChakraSystemRating = ({ selectedOptions, onContinue }) => {
   const [activeChakra, setActiveChakra] = useState(0);
-  const [isLoaded, setIsLoaded] = useState(false); // Для активації після завантаження
+  const [isLoaded, setIsLoaded] = useState(false);
   const [swiperInstance, setSwiperInstance] = useState(null);
 
   useEffect(() => {
-    setIsLoaded(true); // Активуємо після завантаження компонента
+    setIsLoaded(true);
   }, []);
 
   useEffect(() => {
     AOS.init({
-      duration: 500, // Тривалість анімації
-      easing: "ease-in-out", // Плавність
-      once: true, // Анімація тільки один раз
+      duration: 500,
+      easing: "ease-in-out",
+      once: true,
     });
   }, []);
 
   const handlePaginationClick = index => {
     if (swiperInstance) {
-      swiperInstance.slideToLoop(index); // Перемикаємо слайдер
-      setActiveChakra(index); // Оновлюємо активний стан
+      swiperInstance.slideToLoop(index);
+      setActiveChakra(index);
     }
   };
 
   return (
     <div className="w-full max-w-[550px]">
-      {/* Section 1 */}
       <section
         className={`relative  min-h-[600px] pb-[32px] flex flex-col items-center text-white ${
           isLoaded ? "" : "pointer-events-none opacity-50"
-        }`} // Забороняємо взаємодію до завантаження
+        }`}
         style={{
           backgroundImage: `url('/space.webp')`,
           backgroundSize: "cover",
           backgroundPosition: "top",
         }}>
-        {/* Header */}
         <div className="pt-[80px] flex items-center justify-between w-full px-[15px]">
           <div className="border-l-4 border-cyan-400 pl-3">
             <h2 className="text-2xl font-semibold">
@@ -203,7 +201,7 @@ const ChakraSystemRating = ({ selectedOptions, onContinue }) => {
                 activeChakra === index ? "opacity-100" : "opacity-50"
               } transition-opacity duration-300`}
               style={{
-                top: `${12 + index * 34}px`, // Adjust vertical positions
+                top: `${12 + index * 34}px`,
                 left: "50%",
                 transform: "translateX(-50%)",
               }}
@@ -222,7 +220,7 @@ const ChakraSystemRating = ({ selectedOptions, onContinue }) => {
         </div>
         <div className="w-full max-w-[550px] mt-8 px-[15px] pb-[15px]">
           <Swiper
-            onSwiper={setSwiperInstance} // Зберігаємо інстанцію Swiper
+            onSwiper={setSwiperInstance}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
@@ -284,9 +282,7 @@ const ChakraSystemRating = ({ selectedOptions, onContinue }) => {
           </Swiper>
         </div>
       </section>
-      {/* Section 1 */}
 
-      {/* Section 2 */}
       <section className=" bg-gradient-to-b from-[#000d22] to-[#000] pt-10 pb-[40px] px-4">
         <h2 className="text-center text-white text-2xl font-bold mb-8 border-l-4 border-cyan-400 pl-[5px]">
           How Can You Balance Your Chakras?
@@ -343,9 +339,7 @@ const ChakraSystemRating = ({ selectedOptions, onContinue }) => {
           </div>
         </div>
       </section>
-      {/* Section 2 */}
 
-      {/* Section 3 */}
       <section
         className="relative bg-cover mt-[-30px] sm:mt-[-180px] bg-no-repeat min-h-screen flex items-center justify-center flex-col px-4"
         style={{
@@ -388,13 +382,12 @@ const ChakraSystemRating = ({ selectedOptions, onContinue }) => {
                 data-aos="fade-up"
                 key={index}
                 className="flex items-center gap-4 mb-5 p-[15px] bg-gradient-to-b from-[#0000005e] via-[#0000003b] to-[#0000005e] rounded-lg">
-                {/* Image */}
                 <img
                   src={item.image}
                   alt={item.title}
                   className="w-[50px] h-[50px] object-contain"
                 />
-                {/* Content */}
+
                 <div>
                   <h3 className="text-white text-[22px] font-bold">
                     {item.title}
@@ -436,7 +429,6 @@ const ChakraSystemRating = ({ selectedOptions, onContinue }) => {
         </div>
       </section>
 
-      {/* Section 3 */}
       <div className="bg-[#4646464d] sticky bottom-0 left-0 right-0 z-30 text-right p-4 rounded-t-[30px]">
         <button
           className="relative w-full inline-flex mx-auto items-center justify-center bg-[#2fd1db] text-white text-[24px] font-semibold uppercase leading-[28px] py-4 px-5 rounded-[64px] shadow-none transition-all duration-300 ease-in-out hover:bg-blue-600 focus:outline-none active:bg-blue-700"

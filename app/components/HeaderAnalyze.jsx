@@ -22,9 +22,7 @@ const HeaderAnalyze = ({ onBack, currentStep }) => {
 
   return (
     <>
-      {/* Хедер */}
       <header className="flex items-center w-full max-w-[550px] py-4 px-6 absolute top-0 z-50 bg-transparent">
-        {/* Стрілка назад */}
         <div>
           <button
             onClick={onBack}
@@ -37,7 +35,6 @@ const HeaderAnalyze = ({ onBack, currentStep }) => {
           </button>
         </div>
 
-        {/* Бургер меню */}
         <div className="ml-auto">
           <button
             className="text-white focus:outline-none"
@@ -60,7 +57,6 @@ const HeaderAnalyze = ({ onBack, currentStep }) => {
         </div>
       </header>
 
-      {/* Затемнення фону */}
       {isMenuOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40"
@@ -68,7 +64,6 @@ const HeaderAnalyze = ({ onBack, currentStep }) => {
         />
       )}
 
-      {/* Меню */}
       {isMenuOpen && (
         <div className="fixed top-0 right-0 h-screen w-full max-w-[330px] bg-white text-black flex flex-col items-start py-6 px-4 z-50 shadow-lg">
           <button

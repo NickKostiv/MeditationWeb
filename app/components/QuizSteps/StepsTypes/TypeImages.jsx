@@ -8,32 +8,29 @@ import "aos/dist/aos.css";
 const TypeImages = ({ answers, onAnswerClick, selectedIndex }) => {
   useEffect(() => {
     AOS.init({
-      duration: 500, // Duration of the animation
-      easing: "ease-in-out", // Animation easing
-      once: true, // Run animation only once
+      duration: 500,
+      easing: "ease-in-out",
+      once: true,
     });
   }, []);
 
-  // Check if the grid is for colors
   const isColorGrid = answers.every(answer => answer.color);
 
   return (
     <div
       className="flex flex-col w-full items-center justify-start min-h-screen text-white px-4 pt-[15px] pb-[80px]"
-      data-aos="fade-in" // Animation for the entire page
-    >
+      data-aos="fade-in">
       <div
         className={`w-full ${
           isColorGrid
             ? "md:mt-[150px] max-w-[350px] grid-cols-3"
             : "max-w-[300px] grid-cols-2"
         } grid gap-4 place-items-center items-center`}
-        data-aos="zoom-in" // Animation for buttons
-      >
+        data-aos="zoom-in">
         {answers && answers.length > 0 ? (
           answers.map((answer, index) => {
-            const isSelected = parseInt(selectedIndex, 10) === index; // Приводимо до числа
-            const hasSelection = selectedIndex !== undefined; // Перевіряємо, чи є вибір
+            const isSelected = parseInt(selectedIndex, 10) === index;
+            const hasSelection = selectedIndex !== undefined;
 
             return (
               <button
@@ -45,14 +42,12 @@ const TypeImages = ({ answers, onAnswerClick, selectedIndex }) => {
                     : "w-[130px] h-[130px]"
                 } flex items-center justify-center transition-all duration-300 rounded-[17px] shadow-lg ${
                   isSelected
-                    ? "opacity-100 scale-110 border-4 border-white" // Виділення вибраного
+                    ? "opacity-100 scale-110 border-4 border-white"
                     : hasSelection
-                    ? "opacity-50" // Затемнення невибраних
-                    : "opacity-100 hover:opacity-80" // Стандартний стан
+                    ? "opacity-50"
+                    : "opacity-100 hover:opacity-80"
                 }`}
-                style={{ backgroundColor: answer.color || "transparent" }} // Додаємо колір, якщо він є
-              >
-                {/* Відображаємо зображення, якщо є */}
+                style={{ backgroundColor: answer.color || "transparent" }}>
                 {answer.image && (
                   <Image
                     src={answer.image}
@@ -62,13 +57,13 @@ const TypeImages = ({ answers, onAnswerClick, selectedIndex }) => {
                     className="rounded-md"
                   />
                 )}
-                {/* Відображаємо текст тільки якщо немає кольору */}
+
                 {!answer.color && (
                   <span
                     className={`absolute text-lg font-normal transition-all duration-300 ${
                       isSelected || !hasSelection
-                        ? "text-white opacity-100" // Стандартний або вибраний текст
-                        : "text-white opacity-50" // Затемнення невибраного тексту
+                        ? "text-white opacity-100"
+                        : "text-white opacity-50"
                     }`}>
                     {answer.content}
                   </span>
