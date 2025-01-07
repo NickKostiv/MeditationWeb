@@ -14,7 +14,7 @@ const AnalyzingPage = ({ onFinish }) => {
         }
         return prev + 5;
       });
-    }, 300000);
+    }, 300);
 
     return () => clearInterval(interval);
   }, []);
