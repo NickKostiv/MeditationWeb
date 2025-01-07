@@ -50,7 +50,7 @@ export default function MainPage() {
           </p>
           <button
             onClick={() => setShowQuiz(true)} // Trigger the quiz loader
-            className="backdrop-blur-[5px] bg-white/5 border border-white rounded-[50px] text-white font-thin tracking-[3.2px] mt-[42px] opacity-70 md:px-[32px] md:py-[20px] px-[18px] py-[10px] text-[8px] uppercase transition-all duration-[600ms] ease-in-out">
+            className="w-full max-w-[240px] md:max-w-[307px] text-[12px] md:text-[13px] backdrop-blur-[5px] bg-white/5 border border-white rounded-[50px] text-white font-thin tracking-[3.2px] mt-[42px] opacity-70  md:py-[11px] px-[6px] py-[10px] uppercase hover:text-white hover:opacity-100 transition-all duration-[600ms] ease-in-out">
             Start Your Journey
           </button>
         </div>

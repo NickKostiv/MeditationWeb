@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect } from "react";
 import Image from "next/image";
 import AOS from "aos";
@@ -30,8 +32,8 @@ const TypeImages = ({ answers, onAnswerClick, selectedIndex }) => {
       >
         {answers && answers.length > 0 ? (
           answers.map((answer, index) => {
-            const isSelected = selectedIndex === index; // Check if the current answer is selected
-            const hasSelection = selectedIndex !== undefined; // Check if any selection is made
+            const isSelected = parseInt(selectedIndex, 10) === index; // Приводимо до числа
+            const hasSelection = selectedIndex !== undefined; // Перевіряємо, чи є вибір
 
             return (
               <button
@@ -43,14 +45,14 @@ const TypeImages = ({ answers, onAnswerClick, selectedIndex }) => {
                     : "w-[130px] h-[130px]"
                 } flex items-center justify-center transition-all duration-300 rounded-[17px] shadow-lg ${
                   isSelected
-                    ? "opacity-100 scale-110 border-4 border-white" // Highlight selected
+                    ? "opacity-100 scale-110 border-4 border-white" // Виділення вибраного
                     : hasSelection
-                    ? "opacity-50" // Dim unselected
-                    : "opacity-100 hover:opacity-80" // Default state
+                    ? "opacity-50" // Затемнення невибраних
+                    : "opacity-100 hover:opacity-80" // Стандартний стан
                 }`}
-                style={{ backgroundColor: answer.color || "transparent" }} // Apply color if available
+                style={{ backgroundColor: answer.color || "transparent" }} // Додаємо колір, якщо він є
               >
-                {/* Show image if it exists */}
+                {/* Відображаємо зображення, якщо є */}
                 {answer.image && (
                   <Image
                     src={answer.image}
@@ -60,13 +62,13 @@ const TypeImages = ({ answers, onAnswerClick, selectedIndex }) => {
                     className="rounded-md"
                   />
                 )}
-                {/* Show content text only if there's no color */}
+                {/* Відображаємо текст тільки якщо немає кольору */}
                 {!answer.color && (
                   <span
-                    className={`absolute text-lg font-semibold transition-all duration-300 ${
+                    className={`absolute text-lg font-normal transition-all duration-300 ${
                       isSelected || !hasSelection
-                        ? "text-white opacity-100" // Default or selected text
-                        : "text-white opacity-50" // Dim unselected text
+                        ? "text-white opacity-100" // Стандартний або вибраний текст
+                        : "text-white opacity-50" // Затемнення невибраного тексту
                     }`}>
                     {answer.content}
                   </span>

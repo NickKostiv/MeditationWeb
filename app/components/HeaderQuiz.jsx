@@ -29,7 +29,7 @@ const HeaderQuiz = ({ currentStep, totalSteps = 22, onBack }) => {
         </div>
 
         <div className="text-sm font-bold">
-          {currentStep}/{totalSteps}
+          {currentStep}/{22}
         </div>
       </div>
 

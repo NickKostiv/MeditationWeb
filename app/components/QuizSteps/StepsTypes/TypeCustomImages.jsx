@@ -30,7 +30,7 @@ const TypeCustomImages = ({ onAnswerClick, selectedIndex }) => {
   ];
 
   const buttonStyles = [
-    { marginBottom: "-18px", rotate: "-6deg", extraMargin: "ml-[-40px]" },
+    { marginBottom: "-18px", rotate: "-12deg", extraMargin: "ml-[-40px]" },
     { marginBottom: "-15px", rotate: "4deg", extraMargin: "mr-[-20px]" },
     { marginBottom: "-8px", rotate: "-8deg", extraMargin: "ml-[-45px]" },
     { marginBottom: "0px", rotate: "0deg", extraMargin: "" }, // No rotation for the last button
@@ -43,7 +43,7 @@ const TypeCustomImages = ({ onAnswerClick, selectedIndex }) => {
     >
       <div className="w-full flex flex-col items-center">
         {images.map((image, index) => {
-          const isSelected = selectedIndex === index;
+          const isSelected = parseInt(selectedIndex, 10) === index; // Приводимо selectedIndex до числа
           const hasSelection = selectedIndex !== undefined;
 
           return (
@@ -72,7 +72,7 @@ const TypeCustomImages = ({ onAnswerClick, selectedIndex }) => {
                 objectFit="contain"
               />
               <span
-                className={`absolute text-[12px] font-semibold transition-all ${
+                className={`absolute text-[13px] font-semibold transition-all ${
                   isSelected ? "text-black" : "text-white"
                 } z-10`}
                 style={{

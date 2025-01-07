@@ -4,14 +4,15 @@
     "type": "text",
     "question": "How much do you know about chakras?",
     "answers": [
-      { "content": "A lot" },
-      { "content": "A little bit" },
-      { "content": "I've heard about them, but that's it" },
-      { "content": "I don't know anything about this" }
+      { "content": "A lot", "score": 2 },
+      { "content": "A little bit", "score": 1 },
+      { "content": "I've heard about them, but that's it", "score": 1 },
+      { "content": "I don't know anything about this", "score": 0 }
     ]
   },
   {
     "step": 2,
+    "key": "extrainfo",
     "extraInfo": {
       "title": "American Psychological Association's",
       "content": "In so doing, the perspective offered by the chakra system model extends the accepted sequence of lifespan development by augmenting the present conceptual understanding..."
@@ -22,11 +23,11 @@
     "type": "text",
     "question": "How old are you?",
     "answers": [
-      { "content": "18-27" },
-      { "content": "28-37" },
-      { "content": "38-47" },
-      { "content": "48-57" },
-      { "content": "58+" }
+      { "content": "18-27", "score": 2 },
+      { "content": "28-37", "score": 2 },
+      { "content": "38-47", "score": 1 },
+      { "content": "48-57", "score": 1 },
+      { "content": "58+", "score": 0 }
     ]
   },
   {
@@ -34,10 +35,10 @@
     "type": "custom-images",
     "question": "How balanced do you feel in your body, emotions, and thoughts?",
     "answers": [
-      { "content": "Not balanced" },
-      { "content": "Kind of balanced" },
-      { "content": "Pretty balanced" },
-      { "content": "Very balanced" }
+      { "content": "Not balanced", "score": 0 },
+      { "content": "Kind of balanced", "score": 1 },
+      { "content": "Pretty balanced", "score": 2 },
+      { "content": "Very balanced", "score": 2 }
     ]
   },
   {
@@ -45,12 +46,12 @@
     "type": "images",
     "question": "What part of your life feels stuck, or like it's not moving forward in the way you want?",
     "answers": [
-      { "content": "Health", "image": "/table_health.webp", "nextStep": 6 },
-      { "content": "Money", "image": "/table_money.webp", "nextStep": 6 },
-      { "content": "Career", "image": "/table_career.webp", "nextStep": 6 },
-      { "content": "Love", "image": "/table_love.webp", "nextStep": 6 },
-      { "content": "Spirituality", "image": "/table_spirituality.webp", "nextStep": 6 },
-      { "content": "Other", "image": "/table_other.webp", "nextStep": 6 }
+      { "content": "Health", "image": "/table_health.webp", "score": 2, "nextStep": 6 },
+      { "content": "Money", "image": "/table_money.webp", "score": 2, "nextStep": 6 },
+      { "content": "Career", "image": "/table_career.webp", "score": 1, "nextStep": 6 },
+      { "content": "Love", "image": "/table_love.webp", "score": 1, "nextStep": 6 },
+      { "content": "Spirituality", "image": "/table_spirituality.webp", "score": 2, "nextStep": 6 },
+      { "content": "Other", "image": "/table_other.webp", "score": 0, "nextStep": 6 }
     ]
   },
   {
@@ -68,55 +69,56 @@
       {
         "key": "Health",
         "options": [
-          { "content": "Quite often", "image": "/🫠Melting.webp", "nextStep": 7, "key": "QuiteOften" },
-          { "content": "Sometimes", "image": "/🫢mouth.webp", "nextStep": 7, "key": "Sometimes" },
-          { "content": "Rarely", "image": "/🙂Slightly-smiling-face.webp", "nextStep": 7, "key": "Rarely" },
-          { "content": "Never", "image": "/😮Exhaling-face.webp", "nextStep": 7, "key": "Never" }
+          { "content": "Quite often", "image": "/🫠Melting.webp", "nextStep": 7, "score": 2 },
+          { "content": "Sometimes", "image": "/🫢mouth.webp", "score": 1, "nextStep": 7 },
+          { "content": "Rarely", "image": "/🙂Slightly-smiling-face.webp", "score": 0, "nextStep": 7 },
+          { "content": "Never", "image": "/😮Exhaling-face.webp", "score": 0, "nextStep": 7 }
         ]
       },
       {
         "key": "Money",
         "options": [
-          { "content": "Easy come, easy go", "image": "/🤑Money.webp", "nextStep": 7, "key": "EasyComeEasyGo" },
-          { "content": "I am afraid of losing money", "image": "/😨Fearful-face.webp", "nextStep": 7, "key": "AfraidOfLosing" },
-          { "content": "Money is the result of hard work", "image": "/😬Grimacingface.webp", "nextStep": 7, "key": "HardWork" },
-          { "content": "Always running out of money", "image": "/🫥Dotted-face.webp", "nextStep": 7, "key": "RunningOut" }
+          { "content": "Easy come, easy go", "image": "/🤑Money.webp", "score": 2, "nextStep": 7 },
+          { "content": "I am afraid of losing money", "image": "/😨Fearful-face.webp", "score": 1, "nextStep": 7 },
+          { "content": "Money is the result of hard work", "image": "/😬Grimacingface.webp", "score": 2, "nextStep": 7 },
+          { "content": "Always running out of money", "image": "/😒Unamusedface.webp", "score": 2, "nextStep": 7 },
+          { "content": "Other", "image": "/🫥Dotted-face.webp", "score": 0, "nextStep": 7 }
         ]
       },
       {
         "key": "Career",
         "options": [
-          { "content": "Yes, for sure", "nextStep": 7, "key": "YesForSure" },
-          { "content": "Sometimes", "nextStep": 7, "key": "Sometimes" },
-          { "content": "Not really", "nextStep": 7, "key": "NotReally" },
-          { "content": "Prefer not to answer", "nextStep": 7, "key": "PreferNotToAnswer" }
+          { "content": "Yes, for sure", "score": 2, "nextStep": 7 },
+          { "content": "Sometimes", "score": 1, "nextStep": 7 },
+          { "content": "Not really", "score": 0, "nextStep": 7 },
+          { "content": "Prefer not to answer", "score": 0, "nextStep": 7 }
         ]
       },
       {
         "key": "Love",
         "options": [
-          { "content": "It's about serving one another", "image": "/😇halo.webp", "nextStep": 7, "key": "ServingOneAnother" },
-          { "content": "It's just a chemical process", "image": "/🧪TestTube.webp", "nextStep": 7, "key": "ChemicalProcess" },
-          { "content": "Love doesn’t exist", "image": "/💔BrokenHeart.webp", "nextStep": 7, "key": "DoesNotExist" },
-          { "content": "Love is a fundamental aspect of God", "image": "/🙏FoldedHands.webp", "nextStep": 7, "key": "AspectOfGod" }
+          { "content": "It's about serving one another", "image": "/😇halo.webp", "score": 2, "nextStep": 7 },
+          { "content": "It's just a chemical process", "image": "/🧪TestTube.webp", "score": 1, "nextStep": 7 },
+          { "content": "Love doesn’t exist", "image": "/💔BrokenHeart.webp", "score": 0, "nextStep": 7 },
+          { "content": "Love is a fundamental aspect of God", "image": "/🙏FoldedHands.webp", "score": 2, "nextStep": 7 }
         ]
       },
       {
         "key": "Spirituality",
         "options": [
-          { "content": "Yes, for sure", "nextStep": 7, "key": "YesForSure" },
-          { "content": "Sometimes", "nextStep": 7, "key": "Sometimes" },
-          { "content": "Not really", "nextStep": 7, "key": "NotReally" },
-          { "content": "Prefer not to answer", "nextStep": 7, "key": "PreferNotToAnswer" }
+          { "content": "Yes, for sure", "score": 2, "nextStep": 7 },
+          { "content": "Sometimes", "score": 2, "nextStep": 7 },
+          { "content": "Not really", "score": 0, "nextStep": 7 },
+          { "content": "Prefer not to answer", "score": 0, "nextStep": 7 }
         ]
       },
       {
         "key": "Other",
         "options": [
-          { "content": "Quite often", "image": "/Melting.webp", "nextStep": 7, "key": "QuiteOften" },
-          { "content": "Sometimes", "image": "/🫢mouth.webp", "nextStep": 7, "key": "Sometimes" },
-          { "content": "Rarely", "image": "/🙂Slightly-smiling-face.webp", "nextStep": 7, "key": "Rarely" },
-          { "content": "Never", "image": "/😮Exhaling-face.webp", "nextStep": 7, "key": "Never" }
+          { "content": "Quite often", "image": "/Melting.webp", "score": 2, "nextStep": 7 },
+          { "content": "Sometimes", "image": "/🫢mouth.webp", "score": 1, "nextStep": 7 },
+          { "content": "Rarely", "image": "/🙂Slightly-smiling-face.webp", "score": 0, "nextStep": 7 },
+          { "content": "Never", "image": "/😮Exhaling-face.webp", "score": 0, "nextStep": 7 }
         ]
       }
     ]
@@ -126,12 +128,12 @@
     "type": "images",
     "question": "Which color do you like the most right now?",
     "answers": [
-      { "content": "red", "color": "#FF0000" },
-      { "content": "yellow", "color": "#FFFF00" },
-      { "content": "orange", "color": "#FFA500" },
-      { "content": "blue", "color": "#0000FF" },
-      { "content": "green", "color": "#008000" },
-      { "content": "purple", "color": "#800080" }
+      { "content": "red", "color": "#FF0000", "score": 2 },
+      { "content": "yellow", "color": "#FFFF00", "score": 1 },
+      { "content": "orange", "color": "#FFA500", "score": 1 },
+      { "content": "blue", "color": "#0000FF", "score": 2 },
+      { "content": "green", "color": "#008000", "score": 2 },
+      { "content": "purple", "color": "#800080", "score": 2 }
     ]
   },
   {
@@ -139,10 +141,10 @@
     "type": "text-square",
     "question": "Do you feel connected to nature or the universe?",
     "answers": [
-      { "content": "A lot", "image": "/🌿Herb.webp", "nextStep": 9 },
-      { "content": "Sometimes", "image": "/🌞Sun.webp", "nextStep": 9 },
-      { "content": "Rarely", "image": "/🗿Moyai.webp", "nextStep": 9 },
-      { "content": "Not really", "image": "/🫥Dotted-face.webp", "nextStep": 9 }
+      { "content": "A lot", "image": "/🌿Herb.webp", "score": 2, "nextStep": 9 },
+      { "content": "Sometimes", "image": "/🌞Sun.webp", "score": 2, "nextStep": 9 },
+      { "content": "Rarely", "image": "/🗿Moyai.webp", "score": 1, "nextStep": 9 },
+      { "content": "Not really", "image": "/🫥Dotted-face.webp", "score": 0, "nextStep": 9 }
     ]
   },
   {
@@ -150,12 +152,12 @@
     "type": "images",
     "question": "Which element do you like the most?",
     "answers": [
-      { "content": "Earth", "image": "/table_earth.webp", "nextStep": 10 },
-      { "content": "Water", "image": "/table_water.webp", "nextStep": 10 },
-      { "content": "Fire", "image": "/table_fire.webp", "nextStep": 10 },
-      { "content": "Air", "image": "/table_air.webp", "nextStep": 10 },
-      { "content": "Space", "image": "/table_space.webp", "nextStep": 10 },
-      { "content": "Ether", "image": "/table_water.webp", "nextStep": 10 }
+      { "content": "Earth", "image": "/table_earth.webp", "score": 2, "nextStep": 10 },
+      { "content": "Water", "image": "/table_water.webp", "score": 2, "nextStep": 10 },
+      { "content": "Fire", "image": "/table_fire.webp", "score": 1, "nextStep": 10 },
+      { "content": "Air", "image": "/table_air.webp", "score": 1, "nextStep": 10 },
+      { "content": "Space", "image": "/table_space.webp", "score": 2, "nextStep": 10 },
+      { "content": "Ether", "image": "/table_water.webp", "score": 2, "nextStep": 10 }
     ]
   },
   {
@@ -163,9 +165,9 @@
     "type": "text",
     "question": "Do you have a purpose in life?",
     "answers": [
-      { "content": "Yes, for sure" },
-      { "content": "Sometimes" },
-      { "content": "No, I don’t think so" }
+      { "content": "Yes, for sure", "score": 2 },
+      { "content": "Sometimes", "score": 2 },
+      { "content": "No, I don’t think so", "score": 0 }
     ]
   },
   {
@@ -173,12 +175,12 @@
     "type": "text",
     "question": "What emotions do you find difficult to handle?",
     "answers": [
-      { "content": "Anger", "image": "/🤬Anger.webp" },
-      { "content": "Fear", "image": "/😨Fearful-face.webp"},
-      { "content": "Anxiety", "image": "/😬Grimacingface.webp" },
-      { "content": "Sadness", "image": "/😒Unamusedface.webp" },
-      { "content": "Feeling insecure", "image": "/🫠Melting.webp"},
-      { "content": "Other", "image": "/😶Facewithoutmask.webp"}
+      { "content": "Anger", "image": "/🤬Anger.webp", "score": 2 },
+      { "content": "Fear", "image": "/😨Fearful-face.webp", "score": 2 },
+      { "content": "Anxiety", "image": "/😬Grimacingface.webp", "score": 1 },
+      { "content": "Sadness", "image": "/😒Unamusedface.webp", "score": 1 },
+      { "content": "Feeling insecure", "image": "/🫠Melting.webp", "score": 1 },
+      { "content": "Other", "image": "/😶Facewithoutmask.webp", "score": 0 }
     ]
   },
   {
@@ -186,10 +188,10 @@
     "type": "text-square",
     "question": "How often do you experience negative thoughts?",
     "answers": [
-      { "content": "Never", "image": "/😇halo.webp"},
-      { "content": "Rarely", "image": "/🙂Slightly-smiling-face.webp"},
-      { "content": "Sometimes", "image": "/😪Sleepyface.webp"},
-      { "content": "Often", "image": "/🫣Face-with-peeking-eye.webp"}
+      { "content": "Never", "image": "/😇halo.webp", "score": 2 },
+      { "content": "Rarely", "image": "/🙂Slightly-smiling-face.webp", "score": 2 },
+      { "content": "Sometimes", "image": "/😪Sleepyface.webp", "score": 1 },
+      { "content": "Often", "image": "/🫣Face-with-peeking-eye.webp", "score": 0 }
     ]
   },
   {
@@ -197,9 +199,9 @@
     "type": "text",
     "question": "Have you gone through a challenging experience that has affected your energy?",
     "answers": [
-      { "content": "Yes, more than one", "image": "/😒Unamusedface.webp" },
-      { "content": "Yes, one event", "image": "/😬Grimacingface.webp" },
-      { "content": "I don't think so,", "image": "/🙂Slightly-smiling-face.webp"}
+      { "content": "Yes, more than one", "image": "/😒Unamusedface.webp", "score": 2 },
+      { "content": "Yes, one event", "image": "/😬Grimacingface.webp", "score": 1 },
+      { "content": "I don't think so,", "image": "/🙂Slightly-smiling-face.webp", "score": 0 }
     ]
   },
   {
@@ -207,11 +209,57 @@
     "type": "text-square",
     "question": "How often do you experience negative thoughts?",
     "answers": [
-      { "content": "Yes, very easy", "image": "/😎Smiling-face-with-sunglasses.webp"},
-      { "content": "Sometimes", "image": "/🙂Slightly-smiling-face.webp"},
-      { "content": "Not really", "image": "/😔Sad-pensive-face.webp"},
-      { "content": "It's hard", "image": "/🫢mouth.webp"}
+      { "content": "Yes, very easy", "image": "/😎Smiling-face-with-sunglasses.webp", "score": 2 },
+      { "content": "Sometimes", "image": "/🙂Slightly-smiling-face.webp", "score": 2 },
+      { "content": "Not really", "image": "/😔Sad-pensive-face.webp", "score": 1 },
+      { "content": "It's hard", "image": "/🫢mouth.webp", "score": 0 }
+    ]
+  },
+  {
+    "step": 19,
+    "type": "text",
+    "question": "Do you believe your energy levels are consistent throughout the day?",
+    "answers": [
+      { "content": "Yes, always", "score": 2 },
+      { "content": "Most of the time", "score": 2 },
+      { "content": "Sometimes", "score": 1 },
+      { "content": "Rarely", "score": 0 }
+    ]
+  },
+  {
+    "step": 20,
+    "type": "images",
+    "question": "Which chakra resonates with you the most?",
+    "answers": [
+      { "content": "Root", "image": "/table_root.webp", "score": 2 },
+      { "content": "Sacral", "image": "/table_sacral.webp", "score": 2 },
+      { "content": "Solar Plexus", "image": "/table_solar_plexus.webp", "score": 2 },
+      { "content": "Heart", "image": "/table_heart.webp", "score": 1 },
+      { "content": "Throat", "image": "/table_throat.webp", "score": 1 },
+      { "content": "Third Eye", "image": "/table_third_eye.webp", "score": 0 },
+      { "content": "Crown", "image": "/table_crown.webp", "score": 0 }
+    ]
+  },
+  {
+    "step": 21,
+    "type": "text-square",
+    "question": "How often do you meditate or practice mindfulness?",
+    "answers": [
+      { "content": "Daily", "image": "/🧘Meditation.webp", "score": 2 },
+      { "content": "A few times a week", "image": "/🌿Herb.webp", "score": 2 },
+      { "content": "Rarely", "image": "/🗿Moyai.webp", "score": 1 },
+      { "content": "Never", "image": "/🫥Dotted-face.webp", "score": 0 }
+    ]
+  },
+  {
+    "step": 22,
+    "type": "text",
+    "question": "Do you feel connected to your spiritual self?",
+    "answers": [
+      { "content": "Yes, very much", "score": 2 },
+      { "content": "Somewhat", "score": 2 },
+      { "content": "Not really", "score": 1 },
+      { "content": "Not at all", "score": 0 }
     ]
   }
 ]
-
