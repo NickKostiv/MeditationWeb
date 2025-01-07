@@ -46,11 +46,13 @@ export default function MainPage() {
           <p className="font-thin text-[34px] text-white tracking-[0.5em] mt-[15px] text-center uppercase md:mt-[42px] xl:text-[100px] xl:tracking-[20px] md:text-[75px] sm:tracking-[0.5em] sm:mt-[22px] sm:pl-[10px]">
             slowdive
           </p>
-          <div
+          <button
             onClick={() => setShowQuiz(true)}
-            className="w-full max-w-[250px] md:max-w-[248px] px-[12px] py-[14px] text-[12px] backdrop-blur-[5px] bg-white/5 border border-white rounded-[50px] text-white font-thin tracking-[3.2px] mt-[42px] md:opacity-70  uppercase hover:text-white hover:opacity-100 transition-all duration-[600ms] ease-in-out">
-            Start Your Journey
-          </div>
+            className="w-full max-w-[250px] md:max-w-[248px] backdrop-blur-[5px] bg-white/5 border border-white rounded-[50px] tracking-[3.2px] mt-[42px] md:opacity-70 uppercase hover:text-white hover:opacity-100 transition-all duration-[600ms] ease-in-out">
+            <p className=" px-[12px] py-[14px] text-[12px] font-thin text-white">
+              Start Your Journey
+            </p>
+          </button>
         </div>
 
         <div className="absolute md:justify-around bottom-0 w-full flex justify-between px-[10px] md:px-[32px] pb-[95px] md:pb-[75px] text-center md:bg-shadow tracking-[3.2px] font-thin text-white md:text-gray-300 md:text-opacity-60">
