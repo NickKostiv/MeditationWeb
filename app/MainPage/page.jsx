@@ -48,8 +48,8 @@ export default function MainPage() {
           </p>
           <button
             onClick={() => setShowQuiz(true)}
-            className="w-full max-w-[250px] md:max-w-[248px] backdrop-blur-[5px] bg-white/5 border border-white rounded-[50px] tracking-[3.2px] mt-[42px] md:opacity-70 uppercase hover:text-white hover:opacity-100 transition-all duration-[600ms] ease-in-out">
-            <p className=" px-[12px] py-[14px] text-[12px] font-thin text-white">
+            className="mb-[20px] w-full max-w-[250px] md:max-w-[248px] backdrop-blur-[5px] bg-white/5 border border-white rounded-[50px] tracking-[3.2px] mt-[42px] md:opacity-70 uppercase hover:text-white hover:opacity-100 transition-all duration-[600ms] ease-in-out">
+            <p className="px-[12px] py-[14px] text-[12px] font-thin text-white">
               Start Your Journey
             </p>
           </button>
