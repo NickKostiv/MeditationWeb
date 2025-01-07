@@ -20,9 +20,9 @@ export default function QuizPageLoader() {
           setIsQuizLoaded(true);
           return 100;
         }
-        return prev + 1;
+        return prev + 2;
       });
-    }, 10);
+    }, 90);
     return () => clearInterval(interval);
   }, []);
 
@@ -31,7 +31,7 @@ export default function QuizPageLoader() {
   }
 
   return (
-    <div className="relative  h-screen w-full overflow-hidden bg-[radial-gradient(77.28%_53.46%_at_80.97%_37.09%,rgb(12,38,18)_0%,rgb(8,1,19)_100%)] flex flex-col items-center text-white">
+    <div className="relative h-screen w-full overflow-hidden bg-[radial-gradient(77.28%_53.46%_at_80.97%_37.09%,rgb(12,38,18)_0%,rgb(8,1,19)_100%)] flex flex-col items-center text-white">
       <div className="max-w-[444px] h-screen w-full bg-black rounded-md text-center">
         <div className="mt-8">
           <Image src={QuizImage} alt="Quiz Image" className="w-full" />
@@ -61,12 +61,14 @@ export default function QuizPageLoader() {
             </div>
           </div>
 
-          <div className="w-full bg-gray-700 h-[30px] mt-6 rounded-full overflow-hidden">
+          <div className="relative w-full bg-gray-700 h-[30px] mt-6 rounded-full overflow-hidden">
             <div
-              className="bg-[#02bfb9] border-[1px] border-[#02bfb9] h-full transition-all duration-300"
+              className="absolute top-0 left-0 bg-[#02bfb9] border-[1px] border-[#02bfb9] h-full transition-all duration-300"
               style={{ width: `${progress}%` }}></div>
+            <p className="absolute inset-0 flex items-center justify-center text-[14px] text-white font-semibold">
+              {progress}%
+            </p>
           </div>
-          <p className="mt-2">{progress}%</p>
         </div>
 
         <div className="flex justify-between items-center w-full max-w-[444px] px-6 pt-[5px] text-white text-sm bg-black">
@@ -75,7 +77,7 @@ export default function QuizPageLoader() {
             <span className="text-[12px]">App Store | </span>
           </div>
 
-          <div className="flex items-center ">
+          <div className="flex items-center">
             <FaStar className="text-yellow-500 w-[13px] h-[13px]" />
             <FaStar className="text-yellow-500 w-[13px] h-[13px]" />
             <FaStar className="text-yellow-500 w-[13px] h-[13px]" />
