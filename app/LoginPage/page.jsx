@@ -69,9 +69,9 @@ export default function LoginPageLoader() {
           setIsLoginLoaded(true);
           return 100;
         }
-        return prev + 2;
+        return prev + 3;
       });
-    }, 900000);
+    }, 100);
     return () => clearInterval(interval);
   }, []);
 
@@ -80,8 +80,8 @@ export default function LoginPageLoader() {
   }
 
   return (
-    <div className="relative h-screen  overflow-hidden bg-[radial-gradient(77.28%_53.46%_at_80.97%_37.09%,rgb(12,38,18)_0%,rgb(8,1,19)_100%)] flex flex-col items-center justify-end text-white">
-      <div className="max-w-[550px] mb-[80px] w-full rounded-md text-center">
+    <div className="relative h-screen overflow-hidden bg-[radial-gradient(77.28%_53.46%_at_80.97%_37.09%,rgb(12,38,18)_0%,rgb(8,1,19)_100%)] flex flex-col items-center  md:justify-center  text-white">
+      <div className="max-w-[550px] mt-[70px] md:mt-0  w-full rounded-md text-center">
         <div className="px-[20px]">
           <Image
             src={logo}
@@ -114,35 +114,29 @@ export default function LoginPageLoader() {
           </h1>
         </div>
       </div>
-      {/* Reaplce with a slider */}
+
       <div className="w-[650px] mx-auto">
         <Swiper
           modules={[Autoplay]}
-          slidesPerView={2.2}
+          slidesPerView={1.9}
           spaceBetween={20}
           loop={true}
-          speed={5000} // Час для повного проходження одного циклу (в мс)
+          speed={5000}
           autoplay={{
-            delay: 0, // Без пауз
-            disableOnInteraction: false, // Продовжувати рух навіть після взаємодії
+            delay: 0,
+            disableOnInteraction: false,
           }}
           className="testimonial-slider">
           {testimonialSliderData.map((item, index) => (
             <SwiperSlide
               key={index}
-              className="p-[16px] h-full min-h-[180px] w-[280px] bg-white rounded-[17px] flex flex-col justify-center text-left relative overflow-hidden">
+              className="p-[10px] md:p-[16px] h-[175px] min-h-[175px] md:h-[210px] md:min-h-[210px] md:max-h-[180px] w-[322px] bg-white rounded-[17px] flex flex-col justify-center items-center text-left relative overflow-hidden">
               <div className="bg-white flex flex-col justify-between">
-                <p className="text-gray-800 text-[10px] mb-4 leading-relaxed">
+                <p className="text-gray-800 text-[14px] font-normal leading-[14px] md:leading-[18px]">
                   {item.testimonial}
                 </p>
-                <div className="flex items-center mb-3">
-                  <Image
-                    src={stars}
-                    alt="Rating Stars"
-                    width={80}
-                    height={16}
-                    className="mr-2"
-                  />
+                <div className="flex items-center h-full my-[10px]">
+                  <Image src={stars} alt="Rating Stars" />
                 </div>
                 <div className="flex items-center">
                   <Image
@@ -153,10 +147,12 @@ export default function LoginPageLoader() {
                     className="rounded-full mr-3"
                   />
                   <div>
-                    <h3 className="text-black font-bold text-sm">
+                    <h3 className="text-black font-bold text-[15px] md:text-[23px]">
                       {item.name}
                     </h3>
-                    <p className="text-gray-600 text-xs">{item.period}</p>
+                    <p className="text-gray-600 text-[10px] md:text-[13px]">
+                      {item.period}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -165,10 +161,8 @@ export default function LoginPageLoader() {
         </Swiper>
       </div>
 
-      {/* Reaplce with a slider */}
-
-      <div className="mt-[60px] w-full max-w-[650px] px-[15px] md:px-[20px]">
-        <div className="relative w-full max-w-[650px] h-[50px] bg-transparent border border-white rounded-[15px] overflow-hidden flex items-center">
+      <div className="absolute bottom-[70px]  md:bottom-[30px] md:mt-[60px] w-full max-w-[550px] px-[15px] md:px-[20px]">
+        <div className="relative h-[50px] bg-transparent border border-white rounded-[15px] overflow-hidden flex items-center">
           <div
             className="h-[50px] bg-teal-400"
             style={{
