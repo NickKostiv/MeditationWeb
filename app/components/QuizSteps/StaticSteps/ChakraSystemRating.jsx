@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import CircularProgress from "../../CircularProgress";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import CircularProgress from "../../CircularProgress";
 import SwiperCore from "swiper";
 import { Autoplay, Navigation } from "swiper/modules";
 

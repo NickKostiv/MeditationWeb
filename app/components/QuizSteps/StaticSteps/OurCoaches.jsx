@@ -59,7 +59,7 @@ export default function OurCoaches({ onContinue }) {
 
       <div className="w-full max-w-[550px] px-[10px] mb-[120px]">
         <button
-          className="relative w-full max-w-[550px] h-[44px] inline-flex mx-auto items-center justify-center bg-[#2fd1db] text-white text-[17px] font-semibold uppercase leading-[28px] py-4 px-5 rounded-[64px] shadow-none transition-all duration-300 ease-in-out hover:bg-blue-600 focus:outline-none active:bg-blue-700"
+          className="relative w-full max-w-[550px] h-[44px] inline-flex mx-auto items-center justify-center bg-[#2fd1db] text-white text-[17px] md:text-[24px] font-semibold uppercase leading-[28px] py-4 px-5 rounded-[64px] shadow-none transition-all duration-300 ease-in-out hover:bg-blue-600 focus:outline-none active:bg-blue-700"
           onClick={onContinue}>
           Continue
         </button>

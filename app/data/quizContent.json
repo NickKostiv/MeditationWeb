@@ -217,13 +217,13 @@
   },
   {
     "step": 19,
-    "type": "text",
-    "question": "Do you believe your energy levels are consistent throughout the day?",
+    "type": "text-square",
+    "question": "Do you practice mindfulness, meditation, or relaxation?",
     "answers": [
-      { "content": "Yes, always", "score": 2 },
-      { "content": "Most of the time", "score": 2 },
-      { "content": "Sometimes", "score": 1 },
-      { "content": "Rarely", "score": 0 }
+      { "content": "Every day", "image": "/💪Flexed bicep.webp", "score": 2 },
+      { "content": "Sometimes", "image": "/🙌Hands-raised.webp", "score": 2 },
+      { "content": "Not really", "image": "/🤏Pinching-hand.webp", "score": 1 },
+      { "content": "It's hard", "image": "/🫢mouth.webp", "score": 0 }
     ]
   },
   {
@@ -231,35 +231,24 @@
     "type": "images",
     "question": "Which chakra resonates with you the most?",
     "answers": [
-      { "content": "Root", "image": "/table_root.webp", "score": 2 },
-      { "content": "Sacral", "image": "/table_sacral.webp", "score": 2 },
-      { "content": "Solar Plexus", "image": "/table_solar_plexus.webp", "score": 2 },
-      { "content": "Heart", "image": "/table_heart.webp", "score": 1 },
-      { "content": "Throat", "image": "/table_throat.webp", "score": 1 },
-      { "content": "Third Eye", "image": "/table_third_eye.webp", "score": 0 },
-      { "content": "Crown", "image": "/table_crown.webp", "score": 0 }
+      { "content": "Yoga", "image": "/table_yoga.webp", "score": 2 },
+      { "content": "Meditation", "image": "/table_meditation.webp", "score": 2 },
+      { "content": "Nature", "image": "/table_nature.webp", "score": 2 },
+      { "content": "Friends", "image": "/table_friends.webp", "score": 1 },
+      { "content": "Art", "image": "/table_art.webp", "score": 1 },
+      { "content": "Other", "image": "/table_other2.webp", "score": 0 }
     ]
   },
   {
     "step": 21,
-    "type": "text-square",
+    "type": "text",
     "question": "How often do you meditate or practice mindfulness?",
     "answers": [
-      { "content": "Daily", "image": "/🧘Meditation.webp", "score": 2 },
-      { "content": "A few times a week", "image": "/🌿Herb.webp", "score": 2 },
-      { "content": "Rarely", "image": "/🗿Moyai.webp", "score": 1 },
-      { "content": "Never", "image": "/🫥Dotted-face.webp", "score": 0 }
-    ]
-  },
-  {
-    "step": 22,
-    "type": "text",
-    "question": "Do you feel connected to your spiritual self?",
-    "answers": [
-      { "content": "Yes, very much", "score": 2 },
-      { "content": "Somewhat", "score": 2 },
-      { "content": "Not really", "score": 1 },
-      { "content": "Not at all", "score": 0 }
+      { "content": "Feel better overall", "image": "/❤️_🩹Mending-heart.webp", "score": 2 },
+      { "content": "More energy and vitality", "image": "/⚡️Lightning-bolt.webp", "score": 2 },
+      { "content": "Think clearly and focus", "image": "/🧠Brain.webp", "score": 1 },
+      { "content": "Connect with my spiritual side", "image": "/🌀Cyclone.webp", "score": 0 },
+      { "content": "Other", "score": 0 }
     ]
   }
 ]

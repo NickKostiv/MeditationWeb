@@ -44,6 +44,12 @@ const StepRenderer = () => {
       expires: 7,
     });
 
+    if (currentStep === 21) {
+      // Перенаправлення на LoginPageLoader
+      window.location.href = "/LoginPage";
+      return;
+    }
+
     if (nextStep) {
       setTimeout(() => {
         setCurrentStep(nextStep);
