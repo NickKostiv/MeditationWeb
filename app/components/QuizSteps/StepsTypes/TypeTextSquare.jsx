@@ -3,7 +3,7 @@ import React from "react";
 const TypeTextSquare = ({ answers, onAnswerClick, selectedIndex }) => {
   return (
     <div
-      className="flex flex-col w-full max-w-[550px] justify-center md:mt-[130px] text-white px-4 pt-[15px] pb-[80px]"
+      className="flex flex-col w-full max-w-[550px] justify-center md:mt-[80px] text-white px-4 pt-[15px] pb-[80px]"
       data-aos="fade-in">
       <div className="grid grid-cols-2 gap-[20px] m-auto" data-aos="zoom-in">
         {answers.map((answer, index) => {

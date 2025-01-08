@@ -23,7 +23,7 @@ const TypeImages = ({ answers, onAnswerClick, selectedIndex }) => {
       <div
         className={`w-full ${
           isColorGrid
-            ? "md:mt-[150px] max-w-[350px] grid-cols-3"
+            ? "md:mt-[80px] max-w-[350px] grid-cols-3"
             : "max-w-[300px] grid-cols-2"
         } grid gap-4 place-items-center items-center`}
         data-aos="zoom-in">

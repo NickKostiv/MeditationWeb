@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import bgImgCircular from "../../public/lotus-bg.png";
 
 const CircularProgress = ({ value, size = 80, strokeWidth = 10 }) => {
   const [animatedValue, setAnimatedValue] = useState(0);
@@ -22,8 +23,11 @@ const CircularProgress = ({ value, size = 80, strokeWidth = 10 }) => {
 
   return (
     <div
-      className="relative flex items-center justify-center"
-      style={{ width: size, height: size }}>
+      className="relative flex items-center justify-center bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url(${bgImgCircular.src})`,
+        backgroundSize: "50px 50px",
+      }}>
       <svg
         className="transform -rotate-90"
         width={size}
@@ -54,7 +58,7 @@ const CircularProgress = ({ value, size = 80, strokeWidth = 10 }) => {
         />
       </svg>
 
-      <span className="absolute text-white text-sm font-semibold">
+      <span className="absolute text-white text-[23px] font-medium">
         {Math.round(animatedValue)}%
       </span>
     </div>

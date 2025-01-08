@@ -174,7 +174,7 @@ const ChakraSystemRating = ({ selectedOptions, onContinue }) => {
   return (
     <div className="w-full max-w-[550px]">
       <section
-        className={`relative  min-h-[600px] pb-[32px] flex flex-col items-center text-white ${
+        className={`relative min-h-[600px] pb-[32px] flex flex-col items-center text-white ${
           isLoaded ? "" : "pointer-events-none opacity-50"
         }`}
         style={{
@@ -182,9 +182,17 @@ const ChakraSystemRating = ({ selectedOptions, onContinue }) => {
           backgroundSize: "cover",
           backgroundPosition: "top",
         }}>
-        <div className="pt-[80px] flex items-center justify-between w-full px-[15px]">
+        <div className="pt-[60px] md:pt-[80px] flex items-center justify-between w-full px-[15px]">
           <div className="border-l-4 border-cyan-400 pl-3">
-            <h2 className="text-2xl font-semibold">
+            <h2
+              className="text-2xl font-semibold"
+              style={{
+                backgroundImage:
+                  "linear-gradient(98deg, #fff 34.56%, #27e2ef 79.62%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}>
               Your Chakra <br /> System Rating
             </h2>
           </div>
@@ -192,7 +200,7 @@ const ChakraSystemRating = ({ selectedOptions, onContinue }) => {
             <CircularProgress value={30} />
           </div>
         </div>
-        <div className="relative  flex items-center justify-center mt-[15px] mb-[10px] px-[15px]">
+        <div className="relative flex items-center justify-center mt-[15px] mb-[10px] px-[15px]">
           <Image src="/man.png" alt="Chakra System" width={255} height={300} />
           {[...chakraData].reverse().map((chakra, index) => (
             <div
@@ -218,7 +226,7 @@ const ChakraSystemRating = ({ selectedOptions, onContinue }) => {
             </div>
           ))}
         </div>
-        <div className="w-full max-w-[550px] mt-8 px-[15px] pb-[15px]">
+        <div className="w-full max-w-[550px] px-[15px] pb-[15px]">
           <Swiper
             onSwiper={setSwiperInstance}
             autoplay={{
@@ -234,7 +242,7 @@ const ChakraSystemRating = ({ selectedOptions, onContinue }) => {
             {[...chakraData].reverse().map(chakra => (
               <SwiperSlide
                 key={chakra.id}
-                className="p-[20px] h-[250px] min-h-[250px]  w-full max-w-[382px] bg-white bg-opacity-20 rounded-[30px] shadow-md flex flex-col justify-between text-left relative overflow-hidden"
+                className="p-[15px] md:p-[20px] h-[250px] min-h-[250px]  w-full max-w-[382px] bg-white bg-opacity-20 rounded-[30px] shadow-md flex flex-col justify-between text-left relative overflow-hidden"
                 style={{
                   backdropFilter: "blur(10px)",
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
@@ -274,7 +282,7 @@ const ChakraSystemRating = ({ selectedOptions, onContinue }) => {
                 <span className="block text-red-500 text-sm font-bold mt-1 z-10">
                   BLOCKED
                 </span>
-                <p className="text-white text-[14px] font-normal mt-4 z-10">
+                <p className="text-white text-[14px] font-normal mt-[10px] md:mt-4 z-10">
                   {chakra.description}
                 </p>
               </SwiperSlide>
@@ -431,7 +439,7 @@ const ChakraSystemRating = ({ selectedOptions, onContinue }) => {
 
       <div className="bg-[#4646464d] sticky bottom-0 left-0 right-0 z-30 text-right p-4 rounded-t-[30px]">
         <button
-          className="relative w-full inline-flex mx-auto items-center justify-center bg-[#2fd1db] text-white text-[24px] font-semibold uppercase leading-[28px] py-4 px-5 rounded-[64px] shadow-none transition-all duration-300 ease-in-out hover:bg-blue-600 focus:outline-none active:bg-blue-700"
+          className="relative w-full inline-flex mx-auto items-center justify-center bg-[#2fd1db] text-white text-[22px] font-semibold uppercase leading-[18px] py-[16px] px-5 rounded-[64px] shadow-none transition-all duration-300 ease-in-out hover:bg-blue-600 focus:outline-none active:bg-blue-700"
           onClick={onContinue}>
           CONTINUE
         </button>
