@@ -33,7 +33,7 @@ export default function PlanPage() {
 
   return (
     <div className="relative bg-[radial-gradient(77.28%_53.46%_at_80.97%_37.09%,rgb(12,38,18)_0%,rgb(8,1,19)_100%)]">
-      <div className="overflow-hidden flex flex-col items-center pb-[70px]  md:justify-start  text-white">
+      <div className="overflow-hidden flex flex-col items-center pb-[30px]  md:justify-start  text-white">
         <div className="w-full max-w-[550px]">
           <HeaderAnalyze />
           <div className="mt-[90px] flex-col px-6 items-center justify-between w-full">
@@ -88,92 +88,94 @@ export default function PlanPage() {
                 className="w-full"
               />
             </div>
-            <div className="mt-[20px]">
-              <p className="font-sans text-[22px] ">Based on your answers</p>
-              <p className="text-[14px] mt-[5px] leading-[16px] font-light">
-                After analyzing all your responses, we've curated <br />{" "}
-                <strong> the perfect </strong> healing sounds and guided <br />{" "}
-                meditations for you.
-              </p>
-            </div>
-            <div
-              className="scrollbar-custom flex overflow-x-scroll flex-row mt-[20px] max-w-fit pb-[10px] transition-all duration-500 ease-in-out whitespace-nowrap z-[10]"
-              style={{
-                WebkitOverflowScrolling: "touch",
-              }}>
-              <div className="mr-[12px] min-w-[143px] self-end relative">
-                <Image
-                  src={meditationImage1}
-                  alt="Acception and Believes"
-                  width={142}
-                  height={190}
-                  className="inline-block w-full object-cover rounded-md"
-                />
-                <div className="absolute bottom-0 left-0 right-0 text-start bg-opacity-50 px-2 rounded-b-md">
-                  <h3 className="text-white font-sans text-[12px] font-normal leading-[13px] uppercase">
-                    Acception and <br /> Believes
-                  </h3>
-                  <p className="text-white mt-[7px] text-[9px]">12 minutes</p>
-                </div>
+            <div className="flex-col">
+              <div className="mt-[20px]">
+                <p className="font-sans text-[22px] ">Based on your answers</p>
+                <p className="text-[14px] mt-[5px] leading-[16px] font-light">
+                  After analyzing all your responses, we've curated <br />{" "}
+                  <strong> the perfect </strong> healing sounds and guided{" "}
+                  <br /> meditations for you.
+                </p>
               </div>
-              <div className="mr-[12px] min-w-[143px] self-end relative">
-                <Image
-                  src={meditationImage2}
-                  alt="The Inner Peace"
-                  width={142}
-                  height={190}
-                  className="inline-block w-full object-cover rounded-md"
-                />
-                <div className="absolute bottom-0 left-0 right-0 text-start bg-opacity-50 px-2 rounded-b-md">
-                  <h3 className="text-white font-sans text-[12px] font-normal leading-[13px] uppercase">
-                    The Inner Peace
-                  </h3>
-                  <p className="text-white mt-[7px] text-[9px]">20 minutes</p>
+              <div
+                className="scrollbar-custom flex overflow-x-scroll flex-row mt-[20px] max-w-fit pb-[10px] transition-all duration-500 ease-in-out whitespace-nowrap z-[10]"
+                style={{
+                  WebkitOverflowScrolling: "touch",
+                }}>
+                <div className="mr-[12px] min-w-[143px] self-end relative">
+                  <Image
+                    src={meditationImage1}
+                    alt="Acception and Believes"
+                    width={142}
+                    height={190}
+                    className=" w-full object-cover rounded-md"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 text-start bg-opacity-50 px-2 rounded-b-md">
+                    <h3 className="text-white font-sans text-[12px] font-normal leading-[13px] uppercase">
+                      Acception and <br /> Believes
+                    </h3>
+                    <p className="text-white mt-[7px] text-[9px]">12 minutes</p>
+                  </div>
                 </div>
-              </div>
-              <div className="mr-[12px] min-w-[143px] self-end relative">
-                <Image
-                  src={meditationImage3}
-                  alt="I Am Love"
-                  width={142}
-                  height={190}
-                  className="inline-block w-full object-cover rounded-md"
-                />
-                <div className="absolute bottom-0 left-0 right-0 text-start bg-opacity-50 px-2 rounded-b-md">
-                  <h3 className="text-white font-sans text-[12px] font-normal leading-[13px] uppercase">
-                    I Am Love
-                  </h3>
-                  <p className="text-white mt-[7px] text-[9px]">15 minutes</p>
+                <div className="mr-[12px] min-w-[143px] self-end relative">
+                  <Image
+                    src={meditationImage2}
+                    alt="The Inner Peace"
+                    width={142}
+                    height={190}
+                    className=" w-full object-cover rounded-md"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 text-start bg-opacity-50 px-2 rounded-b-md">
+                    <h3 className="text-white font-sans text-[12px] font-normal leading-[13px] uppercase">
+                      The Inner Peace
+                    </h3>
+                    <p className="text-white mt-[7px] text-[9px]">20 minutes</p>
+                  </div>
                 </div>
-              </div>
-              <div className="mr-[12px] min-w-[143px] self-end relative">
-                <Image
-                  src={meditationImage4}
-                  alt="Holotropic Breathwork"
-                  width={142}
-                  height={190}
-                  className="inline-block w-full object-cover rounded-md"
-                />
-                <div className="absolute bottom-0 left-0 right-0 text-start bg-opacity-50 px-2 rounded-b-md">
-                  <h3 className="text-white font-sans text-[12px] font-normal leading-[13px] uppercase">
-                    Holotropic <br /> Breathwork
-                  </h3>
-                  <p className="text-white mt-[7px] text-[9px]">32 minutes</p>
+                <div className="mr-[12px] min-w-[143px] self-end relative">
+                  <Image
+                    src={meditationImage3}
+                    alt="I Am Love"
+                    width={142}
+                    height={190}
+                    className=" w-full object-cover rounded-md"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 text-start bg-opacity-50 px-2 rounded-b-md">
+                    <h3 className="text-white font-sans text-[12px] font-normal leading-[13px] uppercase">
+                      I Am Love
+                    </h3>
+                    <p className="text-white mt-[7px] text-[9px]">15 minutes</p>
+                  </div>
                 </div>
-              </div>
-              <div className="mr-[12px] min-w-[143px] self-end relative">
-                <Image
-                  src={meditationImage5}
-                  alt="Inner Peace"
-                  width={142}
-                  height={190}
-                  className="inline-block w-full object-cover rounded-md"
-                />
-                <div className="absolute bottom-0 left-0 right-0 text-start bg-opacity-50 px-2 rounded-b-md">
-                  <h3 className="text-white font-sans text-[12px] font-normal leading-[13px] uppercase">
-                    Inner Peace
-                  </h3>
-                  <p className="text-white mt-[7px] text-[9px]">20 minutes</p>
+                <div className="mr-[12px] min-w-[143px] self-end relative">
+                  <Image
+                    src={meditationImage4}
+                    alt="Holotropic Breathwork"
+                    width={142}
+                    height={190}
+                    className=" w-full object-cover rounded-md"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 text-start bg-opacity-50 px-2 rounded-b-md">
+                    <h3 className="text-white font-sans text-[12px] font-normal leading-[13px] uppercase">
+                      Holotropic <br /> Breathwork
+                    </h3>
+                    <p className="text-white mt-[7px] text-[9px]">32 minutes</p>
+                  </div>
+                </div>
+                <div className="mr-[12px] min-w-[143px] self-end relative">
+                  <Image
+                    src={meditationImage5}
+                    alt="Inner Peace"
+                    width={142}
+                    height={190}
+                    className=" w-full object-cover rounded-md"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 text-start bg-opacity-50 px-2 rounded-b-md">
+                    <h3 className="text-white font-sans text-[12px] font-normal leading-[13px] uppercase">
+                      Inner Peace
+                    </h3>
+                    <p className="text-white mt-[7px] text-[9px]">20 minutes</p>
+                  </div>
                 </div>
               </div>
             </div>
