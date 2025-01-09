@@ -32,7 +32,7 @@ export default function Login({ onContinue }) {
 
   return (
     <div className="relative w-full h-screen overflow-hidden bg-[radial-gradient(77.28%_53.46%_at_80.97%_37.09%,rgb(12,38,18)_0%,rgb(8,1,19)_100%)] flex flex-col items-center md:justify-start text-white">
-      <div className="px-[20px] w-full max-w-[550px] mt-[50px] md:mt-0 rounded-md text-center">
+      <div className="px-[20px] w-full max-w-[550px] mt-[50px]  rounded-md text-center">
         <div>
           <Image
             src={logo}
