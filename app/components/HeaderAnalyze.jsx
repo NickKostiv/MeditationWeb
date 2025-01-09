@@ -1,13 +1,17 @@
 "use client";
-
+import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
 import backIcon from "../../public/back.svg";
 import closeIcon from "../../public/close-icon.svg";
+import logo from "../../public/logo.webp";
 
 const HeaderAnalyze = ({ onBack, currentStep }) => {
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleResize = () => {
@@ -20,12 +24,20 @@ const HeaderAnalyze = ({ onBack, currentStep }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, [isMenuOpen]);
 
+  const handleBackClick = () => {
+    if (pathname === "/PlanPage") {
+      router.back();
+    } else {
+      onBack();
+    }
+  };
+
   return (
     <>
       <header className="flex items-center w-full max-w-[550px] py-4 px-6 absolute top-0 z-50 bg-transparent">
-        <div>
+        <div className="flex items-center justify-center">
           <button
-            onClick={onBack}
+            onClick={handleBackClick}
             className={`text-white text-xl ${
               currentStep === 1 ? "opacity-50 cursor-not-allowed" : ""
             }`}
@@ -33,6 +45,20 @@ const HeaderAnalyze = ({ onBack, currentStep }) => {
             disabled={currentStep === 1}>
             <Image src={backIcon} alt="back-icon" width={24} height={24} />
           </button>
+
+          {pathname === "/PlanPage" && (
+            <div className="flex items-center ml-4">
+              <Image src={logo} alt="Logo" width={30} height={30} />
+              <div className="ml-2">
+                <p className="text-white text-[15px] font-medium font-sans">
+                  Slowdive
+                </p>
+                <p className="text-white text-[13px] font-normal font-sans">
+                  Meditation & Mantra
+                </p>
+              </div>
+            </div>
+          )}
         </div>
 
         <div className="ml-auto">

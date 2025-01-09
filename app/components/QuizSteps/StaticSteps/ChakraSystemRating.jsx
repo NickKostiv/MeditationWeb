@@ -183,7 +183,7 @@ const ChakraSystemRating = ({ selectedOptions, onContinue }) => {
           backgroundPosition: "top",
         }}>
         <div className="pt-[60px] md:pt-[80px] flex items-center justify-between w-full px-[15px]">
-          <div className="border-l-4 border-cyan-400 pl-3">
+          <div className="border-l-4 border-[#01caba] pl-3">
             <h2
               className="text-2xl font-semibold"
               style={{

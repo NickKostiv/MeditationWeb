@@ -13,3 +13,28 @@
     --foreground: #ededed;
   }
 }
+/* Стиль для горизонтального скролбара */
+.scrollbar-custom::-webkit-scrollbar {
+  height: 8px;
+}
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: #01caba;
+  border-radius: 10px;
+}
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: #e5e7eb;
+}
+.slider-thumb {
+  appearance: none;
+  height: 8px;
+  background-color: #01caba;
+  border-radius: 5px;
+}
+.slider-thumb::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: #01caba;
+  border-radius: 50%;
+  cursor: pointer;
+}

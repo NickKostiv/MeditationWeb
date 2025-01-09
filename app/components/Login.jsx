@@ -1,5 +1,8 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation"; // Импорт хука useRouter
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 import logo from "../../public/logo.webp";
@@ -7,10 +10,11 @@ import logoText from "../../public/logo-text.svg";
 import correctIcon from "../../public/correctIcon.png"; // Correct validation icon
 import lockIcon from "../../public/lock.svg"; // Lock icon for privacy note
 
-export default function Login({ onContinue }) {
+export default function Login() {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [isEmailValid, setIsEmailValid] = useState(false);
+  const router = useRouter(); // Инициализация роутера
 
   useEffect(() => {
     AOS.init({
@@ -28,6 +32,10 @@ export default function Login({ onContinue }) {
     const value = e.target.value;
     setEmail(value);
     setIsEmailValid(validateEmail(value));
+  };
+
+  const handleContinue = () => {
+    router.push("/PlanPage"); // Переход на страницу PlanPage
   };
 
   return (
@@ -121,14 +129,13 @@ export default function Login({ onContinue }) {
               </div>
             </div>
           )}
-          {/* Button */}
         </form>
         {/* Form */}
         {isEmailValid && (
           <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-[550px] bg-[#4646464d] z-30 text-center py-[16px] px-[20px] rounded-t-[30px]">
             <button
               className="relative w-full max-w-[550px] font-sans inline-flex mx-auto items-center justify-center bg-[#2fd1db] text-white text-[20px] md:text-[24px] font-semibold uppercase  py-[7px] px-[20px] rounded-[64px] shadow-none transition-all duration-300 ease-in-out hover:bg-blue-600 focus:outline-none active:bg-blue-700"
-              onClick={onContinue}>
+              onClick={handleContinue}>
               Continue
             </button>
           </div>
