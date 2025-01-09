@@ -107,7 +107,7 @@ export default function PlanPage() {
                   alt="Acception and Believes"
                   width={142}
                   height={190}
-                  className="inline-block w-[142px] object-cover rounded-md"
+                  className="inline-block w-full object-cover rounded-md"
                 />
                 <div className="absolute bottom-0 left-0 right-0 text-start bg-opacity-50 px-2 rounded-b-md">
                   <h3 className="text-white font-sans text-[12px] font-normal leading-[13px] uppercase">
@@ -122,7 +122,7 @@ export default function PlanPage() {
                   alt="The Inner Peace"
                   width={142}
                   height={190}
-                  className="inline-block w-[142px] object-cover rounded-md"
+                  className="inline-block w-full object-cover rounded-md"
                 />
                 <div className="absolute bottom-0 left-0 right-0 text-start bg-opacity-50 px-2 rounded-b-md">
                   <h3 className="text-white font-sans text-[12px] font-normal leading-[13px] uppercase">
@@ -137,7 +137,7 @@ export default function PlanPage() {
                   alt="I Am Love"
                   width={142}
                   height={190}
-                  className="inline-block w-[142px] object-cover rounded-md"
+                  className="inline-block w-full object-cover rounded-md"
                 />
                 <div className="absolute bottom-0 left-0 right-0 text-start bg-opacity-50 px-2 rounded-b-md">
                   <h3 className="text-white font-sans text-[12px] font-normal leading-[13px] uppercase">
@@ -152,7 +152,7 @@ export default function PlanPage() {
                   alt="Holotropic Breathwork"
                   width={142}
                   height={190}
-                  className="inline-block w-[142px] object-cover rounded-md"
+                  className="inline-block w-full object-cover rounded-md"
                 />
                 <div className="absolute bottom-0 left-0 right-0 text-start bg-opacity-50 px-2 rounded-b-md">
                   <h3 className="text-white font-sans text-[12px] font-normal leading-[13px] uppercase">
@@ -167,7 +167,7 @@ export default function PlanPage() {
                   alt="Inner Peace"
                   width={142}
                   height={190}
-                  className="inline-block w-[142px] object-cover rounded-md"
+                  className="inline-block w-full object-cover rounded-md"
                 />
                 <div className="absolute bottom-0 left-0 right-0 text-start bg-opacity-50 px-2 rounded-b-md">
                   <h3 className="text-white font-sans text-[12px] font-normal leading-[13px] uppercase">
