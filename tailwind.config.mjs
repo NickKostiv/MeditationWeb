@@ -18,6 +18,7 @@ export default {
       },
       fontFamily: {
         montserrat: ["var(--font-montserrat)", "Arial", "sans-serif"],
+        sans: ['"Open Sans"', "Arial", "Helvetica", "sans-serif"],
       },
     },
   },

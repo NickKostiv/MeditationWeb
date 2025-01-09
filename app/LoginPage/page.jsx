@@ -3,8 +3,8 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import logo from "../../public/logo.webp";
-import Login from "../components/Login";
 import logoText from "../../public/logo-text.svg";
+import Login from "../components/Login";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
