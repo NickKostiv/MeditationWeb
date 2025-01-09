@@ -113,9 +113,7 @@ export default function PlanPage() {
                   <h3 className="text-white font-sans text-[12px] font-normal leading-[13px] uppercase">
                     Acception and <br /> Believes
                   </h3>
-                  <p className="text-gray-300 mt-[7px] text-[9px]">
-                    12 minutes
-                  </p>
+                  <p className="text-white mt-[7px] text-[9px]">12 minutes</p>
                 </div>
               </div>
               <div className="mr-[12px] min-w-[143px] self-end relative">
@@ -130,9 +128,7 @@ export default function PlanPage() {
                   <h3 className="text-white font-sans text-[12px] font-normal leading-[13px] uppercase">
                     The Inner Peace
                   </h3>
-                  <p className="text-gray-300 mt-[7px] text-[9px]">
-                    20 minutes
-                  </p>
+                  <p className="text-white mt-[7px] text-[9px]">20 minutes</p>
                 </div>
               </div>
               <div className="mr-[12px] min-w-[143px] self-end relative">
@@ -147,9 +143,7 @@ export default function PlanPage() {
                   <h3 className="text-white font-sans text-[12px] font-normal leading-[13px] uppercase">
                     I Am Love
                   </h3>
-                  <p className="text-gray-300 mt-[7px] text-[9px]">
-                    15 minutes
-                  </p>
+                  <p className="text-white mt-[7px] text-[9px]">15 minutes</p>
                 </div>
               </div>
               <div className="mr-[12px] min-w-[143px] self-end relative">
@@ -164,9 +158,7 @@ export default function PlanPage() {
                   <h3 className="text-white font-sans text-[12px] font-normal leading-[13px] uppercase">
                     Holotropic <br /> Breathwork
                   </h3>
-                  <p className="text-gray-300 mt-[7px] text-[9px]">
-                    32 minutes
-                  </p>
+                  <p className="text-white mt-[7px] text-[9px]">32 minutes</p>
                 </div>
               </div>
               <div className="mr-[12px] min-w-[143px] self-end relative">
@@ -181,9 +173,7 @@ export default function PlanPage() {
                   <h3 className="text-white font-sans text-[12px] font-normal leading-[13px] uppercase">
                     Inner Peace
                   </h3>
-                  <p className="text-gray-300 mt-[7px] text-[9px]">
-                    20 minutes
-                  </p>
+                  <p className="text-white mt-[7px] text-[9px]">20 minutes</p>
                 </div>
               </div>
             </div>
@@ -229,7 +219,7 @@ export default function PlanPage() {
               <p className="text-[24px] font-semibold leading-[24px] mb-[13px]">
                 Huge collection of healing sounds
               </p>
-              <p className="text-[15px] md:text-[18px]  font-thin leading-[18px]">
+              <p className="text-[15px] md:text-[18px]  font-normal leading-[18px]">
                 Discover a vast array of sounds and frequencies for all chakra
                 systems
               </p>
@@ -248,7 +238,7 @@ export default function PlanPage() {
               <p className=" text-[24px] font-semibold leading-[24px] mb-[13px]">
                 200+ guided meditations
               </p>
-              <p className="text-[15px] md:text-[18px]  font-thin leading-[18px]">
+              <p className="text-[15px] md:text-[18px]  font-normal leading-[18px]">
                 These meditations are an excellent starting point for beginners
               </p>
             </div>
@@ -266,7 +256,7 @@ export default function PlanPage() {
               <p className=" text-[24px] font-semibold leading-[24px] mb-[13px]">
                 700+ mantras and shamanic music
               </p>
-              <p className="text-[15px] md:text-[18px]  font-thin leading-[18px]">
+              <p className="text-[15px] md:text-[18px]  font-normal leading-[18px]">
                 Explore a rich collection of powerful mantras designed to help
                 you find inner peace
               </p>
@@ -285,7 +275,7 @@ export default function PlanPage() {
               <p className=" text-[24px] font-semibold leading-[24px] mb-[13px]">
                 Breathing exercises and pranayama
               </p>
-              <p className="text-[15px] md:text-[18px]  font-thin leading-[18px]">
+              <p className="text-[15px] md:text-[15px] font-normal leading-[18px]">
                 Breathwork can reduce stress, anxiety, fatigue, can improve lung
                 function, focus, and sleep
               </p>
@@ -304,7 +294,7 @@ export default function PlanPage() {
               <p className=" text-[24px] font-semibold leading-[24px] mb-[13px]">
                 Personalised meditation plan
               </p>
-              <p className="text-[15px] md:text-[18px]  font-thin leading-[18px]">
+              <p className="text-[15px] md:text-[18px]  font-normal leading-[18px]">
                 A customized program with a combination of guided meditations,
                 mantras & sounds
               </p>
