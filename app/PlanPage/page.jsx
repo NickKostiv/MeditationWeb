@@ -97,7 +97,7 @@ export default function PlanPage() {
               </p>
             </div>
             <div
-              className="scrollbar-custom flex overflow-x-scroll flex-row mt-[55px] max-w-fit pb-[10px] transition-all duration-500 ease-in-out whitespace-nowrap z-[10]"
+              className="scrollbar-custom flex overflow-x-scroll flex-row mt-[20px] max-w-fit pb-[10px] transition-all duration-500 ease-in-out whitespace-nowrap z-[10]"
               style={{
                 WebkitOverflowScrolling: "touch",
               }}>
