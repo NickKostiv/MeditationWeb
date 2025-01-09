@@ -24,7 +24,7 @@ import planChoiceImg5 from "../../public/plan__personalised.webp";
 
 import planFooterImg from "../../public/plan__footer.webp";
 
-export default function PlanPage({ onContinue }) {
+const PlanPage = ({ onContinue }) => {
   return (
     <div className="relative bg-[radial-gradient(77.28%_53.46%_at_80.97%_37.09%,rgb(12,38,18)_0%,rgb(8,1,19)_100%)]">
       <div className="overflow-hidden flex flex-col items-center  md:justify-start  text-white">
@@ -346,4 +346,5 @@ export default function PlanPage({ onContinue }) {
       </div>
     </div>
   );
-}
+};
+export default PlanPage;
