@@ -98,11 +98,11 @@ export default function PlanPage() {
                 </p>
               </div>
               <div
-                className="scrollbar-custom flex overflow-x-scroll flex-row mt-[20px] max-w-fit pb-[10px] transition-all duration-500 ease-in-out whitespace-nowrap z-[10]"
+                className="scrollbar-custom flex overflow-x-scroll flex-row mt-[20px] max-w-fit h-[130px] pb-[10px] whitespace-nowrap z-[10]"
                 style={{
                   WebkitOverflowScrolling: "touch",
                 }}>
-                <div className="mr-[12px] min-w-[143px] self-end relative">
+                <div className="mr-[12px] min-w-[143px] flex-shrink-0 self-end relative">
                   <Image
                     src={meditationImage1}
                     alt="Acception and Believes"
@@ -117,7 +117,7 @@ export default function PlanPage() {
                     <p className="text-white mt-[7px] text-[9px]">12 minutes</p>
                   </div>
                 </div>
-                <div className="mr-[12px] min-w-[143px] self-end relative">
+                <div className="mr-[12px] min-w-[143px] flex-shrink-0 self-end relative">
                   <Image
                     src={meditationImage2}
                     alt="The Inner Peace"
@@ -132,7 +132,7 @@ export default function PlanPage() {
                     <p className="text-white mt-[7px] text-[9px]">20 minutes</p>
                   </div>
                 </div>
-                <div className="mr-[12px] min-w-[143px] self-end relative">
+                <div className="mr-[12px] min-w-[143px] flex-shrink-0 self-end relative">
                   <Image
                     src={meditationImage3}
                     alt="I Am Love"
@@ -147,7 +147,7 @@ export default function PlanPage() {
                     <p className="text-white mt-[7px] text-[9px]">15 minutes</p>
                   </div>
                 </div>
-                <div className="mr-[12px] min-w-[143px] self-end relative">
+                <div className="mr-[12px] min-w-[143px] flex-shrink-0 self-end relative">
                   <Image
                     src={meditationImage4}
                     alt="Holotropic Breathwork"
@@ -162,7 +162,7 @@ export default function PlanPage() {
                     <p className="text-white mt-[7px] text-[9px]">32 minutes</p>
                   </div>
                 </div>
-                <div className="mr-[12px] min-w-[143px] self-end relative">
+                <div className="mr-[12px] min-w-[143px] flex-shrink-0 self-end relative">
                   <Image
                     src={meditationImage5}
                     alt="Inner Peace"
