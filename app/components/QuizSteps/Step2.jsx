@@ -59,7 +59,7 @@ const Step2 = ({ onContinue }) => {
 
       <div className="w-full max-w-[500px] bg-[#4646464d] sticky bottom-0 left-0 right-0 z-30 text-right p-4 rounded-t-[30px]">
         <button
-          className="relative w-full inline-flex mx-auto items-center justify-center bg-[#2fd1db] text-white text-[24px] font-semibold uppercase leading-[28px] py-4 px-5 rounded-[64px] shadow-none transition-all duration-300 ease-in-out hover:bg-blue-600 focus:outline-none active:bg-blue-700"
+          className="relative w-full inline-flex mx-auto items-center justify-center bg-[#2fd1db] text-white text-[24px] font-semibold uppercase leading-[28px] py-4 px-5 rounded-[64px] shadow-none transition-all duration-300 ease-in-out  focus:outline-none active:scale-90"
           onClick={onContinue}>
           CONTINUE
         </button>

@@ -1,3 +1,4 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -18,7 +19,12 @@ export default {
       },
       fontFamily: {
         montserrat: ["var(--font-montserrat)", "Arial", "sans-serif"],
-        sans: ['"Open Sans"', "Arial", "Helvetica", "sans-serif"],
+        sans: [
+          '"Open Sans"',
+          "Arial",
+          "Helvetica",
+          ...defaultTheme.fontFamily.sans,
+        ],
       },
     },
   },

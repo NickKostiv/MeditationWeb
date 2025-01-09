@@ -134,7 +134,7 @@ export default function Login() {
         {isEmailValid && (
           <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-[550px] bg-[#4646464d] z-30 text-center py-[16px] px-[20px] rounded-t-[30px]">
             <button
-              className="relative w-full max-w-[550px] font-sans inline-flex mx-auto items-center justify-center bg-[#2fd1db] text-white text-[20px] md:text-[24px] font-semibold uppercase  py-[7px] px-[20px] rounded-[64px] shadow-none transition-all duration-300 ease-in-out hover:bg-blue-600 focus:outline-none active:bg-blue-700"
+              className="relative w-full max-w-[550px] font-sans inline-flex mx-auto items-center justify-center bg-[#2fd1db] text-white text-[20px] md:text-[24px] font-semibold uppercase  py-[7px] px-[20px] rounded-[64px] shadow-none transition-all duration-300 ease-in-out focus:outline-none active:scale-90"
               onClick={handleContinue}>
               Continue
             </button>
