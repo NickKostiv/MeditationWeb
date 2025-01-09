@@ -84,7 +84,7 @@ export default function PlanPage() {
                 className="w-full"
               />
             </div>
-            <div className="my-[40px]">
+            <div className="mb-[40px]">
               <p className="font-sans text-[22px] ">Based on your answers</p>
               <p className="text-[14px] mt-[5px] leading-[16px] font-light">
                 After analyzing all your responses, we've curated <br />{" "}
