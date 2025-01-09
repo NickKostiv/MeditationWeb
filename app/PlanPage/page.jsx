@@ -33,7 +33,7 @@ export default function PlanPage() {
 
   return (
     <div className="relative bg-[radial-gradient(77.28%_53.46%_at_80.97%_37.09%,rgb(12,38,18)_0%,rgb(8,1,19)_100%)]">
-      <div className="overflow-hidden flex flex-col items-center  md:justify-start  text-white">
+      <div className="overflow-hidden flex flex-col items-center  md:justify-start  text-white mb-[40px]">
         <div className="w-full max-w-[550px]">
           <HeaderAnalyze />
           <div className="mt-[90px] flex-col px-6 items-center justify-between w-full">
@@ -61,11 +61,7 @@ export default function PlanPage() {
                 Updated weekly.
               </p>
             </div>
-            <div
-              className="scrollbar-custom flex !overflow-x-scroll flex-row mt-5 max-w-fit  pb-[10px] transition-all duration-500 ease-in-out whitespace-nowrap z-[10]"
-              style={{
-                WebkitOverflowScrolling: "touch",
-              }}>
+            <div className="scrollbar-custom flex !overflow-x-scroll flex-row mt-5 max-w-fit  pb-[10px] transition-all duration-500 ease-in-out whitespace-nowrap z-[10]">
               <Image
                 src={planImg1}
                 alt="Plan Image 1"
@@ -88,7 +84,7 @@ export default function PlanPage() {
                 className="w-full"
               />
             </div>
-            <div className="mt-[20px]">
+            <div className="my-[40px]">
               <p className="font-sans text-[22px] ">Based on your answers</p>
               <p className="text-[14px] mt-[5px] leading-[16px] font-light">
                 After analyzing all your responses, we've curated <br />{" "}
@@ -96,12 +92,8 @@ export default function PlanPage() {
                 meditations for you.
               </p>
             </div>
-            <div
-              className="scrollbar-custom flex overflow-x-scroll flex-row mt-[20px] max-w-fit pb-[10px] transition-all duration-500 ease-in-out whitespace-nowrap z-[10]"
-              style={{
-                WebkitOverflowScrolling: "touch",
-              }}>
-              <div className="mr-[12px] min-w-[143px] self-end relative">
+            <div className="scrollbar-custom flex overflow-x-scroll flex-row max-w-fit pb-[10px] transition-all duration-500 ease-in-out whitespace-nowrap z-[10]">
+              <div className="mr-[12px] min-w-[143px]  relative">
                 <Image
                   src={meditationImage1}
                   alt="Acception and Believes"
@@ -116,7 +108,7 @@ export default function PlanPage() {
                   <p className="text-white mt-[7px] text-[9px]">12 minutes</p>
                 </div>
               </div>
-              <div className="mr-[12px] min-w-[143px] self-end relative">
+              <div className="mr-[12px] min-w-[143px]  relative">
                 <Image
                   src={meditationImage2}
                   alt="The Inner Peace"
@@ -131,7 +123,7 @@ export default function PlanPage() {
                   <p className="text-white mt-[7px] text-[9px]">20 minutes</p>
                 </div>
               </div>
-              <div className="mr-[12px] min-w-[143px] self-end relative">
+              <div className="mr-[12px] min-w-[143px]  relative">
                 <Image
                   src={meditationImage3}
                   alt="I Am Love"
@@ -146,7 +138,7 @@ export default function PlanPage() {
                   <p className="text-white mt-[7px] text-[9px]">15 minutes</p>
                 </div>
               </div>
-              <div className="mr-[12px] min-w-[143px] self-end relative">
+              <div className="mr-[12px] min-w-[143px]  relative">
                 <Image
                   src={meditationImage4}
                   alt="Holotropic Breathwork"
@@ -161,7 +153,7 @@ export default function PlanPage() {
                   <p className="text-white mt-[7px] text-[9px]">32 minutes</p>
                 </div>
               </div>
-              <div className="mr-[12px] min-w-[143px] self-end relative">
+              <div className="mr-[12px] min-w-[143px]  relative">
                 <Image
                   src={meditationImage5}
                   alt="Inner Peace"
