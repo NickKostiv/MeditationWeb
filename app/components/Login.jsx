@@ -2,19 +2,19 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation"; // Импорт хука useRouter
+import { useRouter } from "next/navigation";
 import AOS from "aos";
-import "aos/dist/aos.css"; // Import AOS styles
+import "aos/dist/aos.css";
 import logo from "../../public/logo.webp";
 import logoText from "../../public/logo-text.svg";
-import correctIcon from "../../public/correctIcon.png"; // Correct validation icon
-import lockIcon from "../../public/lock.svg"; // Lock icon for privacy note
+import correctIcon from "../../public/correctIcon.png";
+import lockIcon from "../../public/lock.svg";
 
 export default function Login() {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [isEmailValid, setIsEmailValid] = useState(false);
-  const router = useRouter(); // Инициализация роутера
+  const router = useRouter();
 
   useEffect(() => {
     AOS.init({
@@ -35,7 +35,7 @@ export default function Login() {
   };
 
   const handleContinue = () => {
-    router.push("/PlanPage"); // Переход на страницу PlanPage
+    router.push("/PlanPage");
   };
 
   return (

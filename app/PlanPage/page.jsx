@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import HeaderAnalyze from "../components/HeaderAnalyze";
 
@@ -24,7 +25,12 @@ import planChoiceImg5 from "../../public/plan__personalised.webp";
 
 import planFooterImg from "../../public/plan__footer.webp";
 
-const PlanPage = ({ onContinue }) => {
+export default function PlanPage() {
+  const router = useRouter();
+  const handleContinue = () => {
+    router.push("/SubscribePage"); // Переход на страницу PlanPage
+  };
+
   return (
     <div className="relative bg-[radial-gradient(77.28%_53.46%_at_80.97%_37.09%,rgb(12,38,18)_0%,rgb(8,1,19)_100%)]">
       <div className="overflow-hidden flex flex-col items-center  md:justify-start  text-white">
@@ -340,11 +346,10 @@ const PlanPage = ({ onContinue }) => {
       <div className="bg-[#4646464d] mx-auto w-[full] max-w-[550px] sticky bottom-0 left-0 right-0 z-30 text-right p-4 rounded-t-[30px]">
         <button
           className="relative  inline-flex mx-auto w-full max-w-[550px] items-center justify-center bg-[#2fd1db] text-white text-[22px] font-semibold uppercase leading-[18px] py-[16px] px-5 rounded-[64px] shadow-none transition-all duration-300 ease-in-out hover:bg-blue-600 focus:outline-none active:bg-blue-700"
-          onClick={onContinue}>
+          onClick={handleContinue}>
           CONTINUE
         </button>
       </div>
     </div>
   );
-};
-export default PlanPage;
+}
