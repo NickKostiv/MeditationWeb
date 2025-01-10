@@ -31,7 +31,7 @@ export default function page() {
     router.push("/");
   };
   return (
-    <div className="relative bg-black flex flex-col items-center justify-center">
+    <div className="relative bg-pay-gradient flex flex-col items-center justify-center">
       <HeaderAnalyze />
       <div className="w-full max-w-[550px] px-[20px] mt-[80px]">
         <h2 className="text-white text-center text-[20px] font-sans font-normal">

@@ -16,6 +16,8 @@ export default {
       backgroundImage: {
         shadow:
           "linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.1) 45%, #030813)",
+        "pay-gradient":
+          "radial-gradient(circle at 50% 57%, #000 -3%, #46c0dbcc 0, #000 13%)",
       },
       fontFamily: {
         montserrat: ["var(--font-montserrat)", "Arial", "sans-serif"],
