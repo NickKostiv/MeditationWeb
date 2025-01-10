@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import discontData from "../../data/discont.json";
+import discountData from "../../data/discount.json";
 import Image from "next/image";
 
 import PayPalIcon from "../../../public/paypal.svg";
@@ -98,7 +98,7 @@ export default function PaymentForm() {
   };
 
   const handleAddDiscount = () => {
-    const validDiscount = discontData.find(
+    const validDiscount = discountData.find(
       discount => discount.code === discountInput.trim()
     );
     if (validDiscount) {

@@ -75,7 +75,13 @@ export default function page() {
           {/* Review 1 */}
           <div className="flex flex-col  bg-[#131515] rounded-[14px] p-[16px] text-white">
             <div className="flex gap-4">
-              <Image src={LindaAva} alt="Linda image" width={45} height={45} />
+              <Image
+                src={LindaAva}
+                alt="Linda image"
+                width={45}
+                height={45}
+                className="w-full max-w-[45px] h-full min-h-[45px]"
+              />
               <div className="">
                 <h3 className="font-bold">Linda</h3>
                 <p className="text-gray-400 text-[11px] md:text-[13px]">
@@ -106,6 +112,7 @@ export default function page() {
                 alt="Linda image"
                 width={45}
                 height={45}
+                className="w-full max-w-[45px] h-full min-h-[45px]"
               />
               <div className="">
                 <h3 className="font-bold">Patricia</h3>
@@ -132,7 +139,13 @@ export default function page() {
           {/* Review 3 */}
           <div className="flex flex-col   justify-between bg-[#131515] rounded-[14px] p-[16px] text-white">
             <div className="flex items-start gap-4">
-              <Image src={IgorAva} alt="Linda image" width={45} height={45} />
+              <Image
+                src={IgorAva}
+                alt="Linda image"
+                width={45}
+                height={45}
+                className="w-full max-w-[45px] h-full min-h-[45px]"
+              />
               <div className="">
                 <h3 className="font-bold">Igor</h3>
                 <p className="text-gray-400 text-[11px] md:text-[13px]">
