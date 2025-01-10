@@ -25,7 +25,7 @@ const HeaderAnalyze = ({ onBack, currentStep }) => {
   }, [isMenuOpen]);
 
   const handleBackClick = () => {
-    if (pathname === "/PlanPage") {
+    if (pathname === "/PlanPage" || pathname === "/SubscribePage") {
       router.back();
     } else {
       onBack();
@@ -46,7 +46,7 @@ const HeaderAnalyze = ({ onBack, currentStep }) => {
             <Image src={backIcon} alt="back-icon" width={24} height={24} />
           </button>
 
-          {pathname === "/PlanPage" && (
+          {(pathname === "/PlanPage" || pathname === "/SubscribePage") && (
             <div className="flex items-center ml-4">
               <Image src={logo} alt="Logo" width={30} height={30} />
               <div className="ml-2">
