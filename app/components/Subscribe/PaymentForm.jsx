@@ -4,6 +4,9 @@ import discountData from "../../data/discount.json";
 import Image from "next/image";
 
 import PayPalIcon from "../../../public/paypal.svg";
+import ApplePayIcon from "../../../public/ApplePay.svg";
+import GPaycon from "../../../public/gpay.svg";
+
 import VisaIcon from "../../../public/visa.svg";
 import MasterCardIcon from "../../../public/mastercard.svg";
 import AmexIcon from "../../../public/amex.svg";
@@ -22,7 +25,7 @@ export default function PaymentForm() {
   const [errors, setErrors] = useState({});
 
   const validateCardNumber = number => {
-    const formattedNumber = number.replace(/\s/g, ""); // Remove spaces
+    const formattedNumber = number.replace(/\s/g, "");
     if (formattedNumber.length !== 16)
       return "Enter a valid credit card number";
     return null;
@@ -40,7 +43,7 @@ export default function PaymentForm() {
       return "Enter a valid expiry";
     if (month.length > 2 || year.length > 2) return "Invalid expiry format";
     if (Number(month) < 1 || Number(month) > 12) return "Invalid month";
-    const currentYear = new Date().getFullYear() % 100; // Get last 2 digits of the year
+    const currentYear = new Date().getFullYear() % 100;
     const currentMonth = new Date().getMonth() + 1;
     if (
       Number(year) < currentYear ||
@@ -73,16 +76,14 @@ export default function PaymentForm() {
 
   const formatCardNumber = value => {
     return value
-      .replace(/\D/g, "") // Remove non-digits
-      .slice(0, 16) // Limit to 16 digits
-      .replace(/(\d{4})/g, "$1 ") // Add space every 4 digits
-      .trim(); // Remove trailing spaces
+      .replace(/\D/g, "")
+      .slice(0, 16)
+      .replace(/(\d{4})/g, "$1 ")
+      .trim();
   };
 
   const handleExpirationInput = value => {
-    const formattedValue = value
-      .replace(/\D/g, "") // Remove non-digits
-      .slice(0, 4); // Limit to 4 digits
+    const formattedValue = value.replace(/\D/g, "").slice(0, 4);
     if (formattedValue.length > 2) {
       return formattedValue.slice(0, 2) + "/" + formattedValue.slice(2);
     }
@@ -90,11 +91,11 @@ export default function PaymentForm() {
   };
 
   const handleCvvInput = value => {
-    return value.replace(/\D/g, "").slice(0, 3); // Limit to 3 digits
+    return value.replace(/\D/g, "").slice(0, 3);
   };
 
   const handleCardNameInput = value => {
-    return value.replace(/[^A-Za-z\s]/g, ""); // Allow only letters and spaces
+    return value.replace(/[^A-Za-z\s]/g, "");
   };
 
   const handleAddDiscount = () => {
@@ -116,7 +117,6 @@ export default function PaymentForm() {
 
   return (
     <div className="p-4">
-      {/* Основна форма */}
       {!isDiscountFormOpen && (
         <>
           {appliedDiscount ? (
@@ -135,15 +135,37 @@ export default function PaymentForm() {
               Add Discount
             </button>
           )}
-
-          <div className="mt-4 bg-white py-2 px-7 border-[1px] border-[#179bd7] rounded-[30px]">
+          <div className="mt-4 flex justify-center items-center bg-white py-2 px-7 border-[1px] border-[#179bd7] rounded-[30px]">
             <button>
               <Image
                 src={PayPalIcon}
                 width={98}
                 height={24}
                 alt="paypal method"
-                className="my-auto"
+                className="my-auto w-full max-w-[98px] h-full max-h-[24px]"
+              />
+            </button>
+          </div>
+          <div className="mt-4 flex justify-center items-center bg-white py-2 px-7 border-[1px] border-[#179bd7] rounded-[30px]">
+            <button>
+              <Image
+                src={ApplePayIcon}
+                width={98}
+                height={24}
+                alt="Apple Pay"
+                className="my-auto w-full max-w-[98px] h-full max-h-[24px]"
+              />
+            </button>
+          </div>
+
+          <div className="mt-4 flex justify-center items-center bg-white py-2 px-7 border-[1px] border-[#179bd7] rounded-[30px]">
+            <button>
+              <Image
+                src={GPaycon}
+                width={98}
+                height={24}
+                alt="Google Pay"
+                className="my-auto w-full max-w-[98px] h-full max-h-[24px]"
               />
             </button>
           </div>
@@ -156,10 +178,7 @@ export default function PaymentForm() {
               <div className="border-t border-white flex-grow"></div>
             </div>
           </div>
-
-          {/* Тут може бути ваша основна частина форми */}
           <form className="space-y-4">
-            {/* Card number */}
             <div>
               <label
                 className="block text-white text-start text-[14px] mb-2"
@@ -200,7 +219,6 @@ export default function PaymentForm() {
               )}
             </div>
 
-            {/* Name on card */}
             <div>
               <label
                 className="block text-start text-white text-[14px] mb-2"
@@ -225,7 +243,6 @@ export default function PaymentForm() {
               )}
             </div>
 
-            {/* Expiration date and Security code */}
             <div className="flex gap-4">
               <div className="flex-1">
                 <label
@@ -288,7 +305,7 @@ export default function PaymentForm() {
           </form>
         </>
       )}
-      {/* Форма додавання дисконту */}
+
       {isDiscountFormOpen && (
         <div className="mt-4">
           {error && (

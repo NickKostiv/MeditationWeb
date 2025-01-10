@@ -8,7 +8,7 @@ import PlanForm from "../components/Subscribe/PlanForm";
 import PaymentForm from "../components/Subscribe/PaymentForm";
 
 import chartImg from "../../public/subscribe-chart.svg";
-import StartImg from "../../public/stars2.webp";
+import StarsImg from "../../public/stars2.webp";
 import RoundedImages from "../../public/subscribe__downloads.webp";
 import IgorAva from "../../public/avatar3.png";
 import LindaAva from "../../public/avatar5.png";
@@ -42,22 +42,18 @@ export default function page() {
         <Image src={chartImg} alt="chart image" className="mt-[20px] mx-auto" />
         <PlanForm />
         <div className="relative mt-[40px]">
-          {/* Верхній текст */}
           <div className="absolute top-[90px] sm:top-[120px] w-full flex flex-col items-center text-center">
             <p className="text-white text-[14px] font-normal leading-[15px]">
               users started their <br /> spiritual journey with us
             </p>
           </div>
 
-          {/* Зображення */}
-          <Image src={StartImg} alt="Stars" className="w-full" />
+          <Image src={StarsImg} alt="Stars" className="w-full" />
 
-          {/* Текст посередині під зірочками */}
           <div className="absolute bottom-[120px] left-[-90px] sm:bottom-[190px] sm:left-[-130px] w-full flex justify-center">
             <p className="text-white text-[14px] font-medium">4.8 out of 5</p>
           </div>
 
-          {/* Нижній текст */}
           <p className="absolute sm:bottom-[30px] bottom-2 w-full left-1/2 transform -translate-x-1/2 text-white text-center text-[16px] md:text-[21px] font-medium">
             113,000+ 5-star ratings from <br /> happy users 😍
           </p>
@@ -72,7 +68,6 @@ export default function page() {
         </div>
 
         <div className="flex flex-col gap-6 mt-[30px] font-sans ">
-          {/* Review 1 */}
           <div className="flex flex-col  bg-[#131515] rounded-[14px] p-[16px] text-white">
             <div className="flex gap-4">
               <Image
@@ -104,7 +99,6 @@ export default function page() {
             </p>
           </div>
 
-          {/* Review 2 */}
           <div className="flex flex-col   justify-between bg-[#131515] rounded-[14px] p-[16px] text-white">
             <div className="flex items-start gap-4">
               <Image
@@ -136,7 +130,6 @@ export default function page() {
             </p>
           </div>
 
-          {/* Review 3 */}
           <div className="flex flex-col   justify-between bg-[#131515] rounded-[14px] p-[16px] text-white">
             <div className="flex items-start gap-4">
               <Image

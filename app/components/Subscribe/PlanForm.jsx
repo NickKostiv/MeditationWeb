@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import Image from "next/image";
 import personIcon from "../../../public/person.png";
 export default function PlanForm() {
-  const [selectedPlan, setSelectedPlan] = useState("12-week"); // За замовчуванням другий план активний
+  const [selectedPlan, setSelectedPlan] = useState("12-week");
 
   const handlePlanSelect = plan => {
     setSelectedPlan(plan);
   };
   return (
     <div className="mt-[40px] flex font-sans flex-col gap-4">
-      {/* 1 Week Plan */}
       <label
         className={`flex items-center justify-between border rounded-[16px] cursor-pointer transition-all duration-300 ${
           selectedPlan === "1-week"
@@ -57,7 +56,6 @@ export default function PlanForm() {
         </div>
       </label>
 
-      {/* 12 Week Plan */}
       <label
         className={`flex items-center justify-between border rounded-[16px] cursor-pointer transition-all duration-300 ${
           selectedPlan === "12-week"
@@ -108,7 +106,6 @@ export default function PlanForm() {
         </div>
       </label>
 
-      {/* 4 Week Plan */}
       <label
         className={`flex items-center justify-between border rounded-[16px] cursor-pointer transition-all duration-300 ${
           selectedPlan === "4-week"
