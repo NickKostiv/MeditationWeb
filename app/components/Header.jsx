@@ -45,7 +45,7 @@ const Header = () => {
         <ul className="flex space-x-8 text-white text-lg">
           <li>
             <Link
-              href="/how-it-works"
+              href="/HowItWorksPage"
               className="hover:opacity-75 text-[10px] font-normal tracking-[3px]">
               HOW IT WORKS
             </Link>
@@ -106,7 +106,7 @@ const Header = () => {
           <ul className="flex flex-col space-y-4 text-lg">
             <li>
               <Link
-                href="/how-it-works"
+                href="/HowItWorksPage"
                 className="hover:opacity-75 text-[10px] font-normal tracking-[3px]"
                 onClick={() => setIsMenuOpen(false)}>
                 HOW IT WORKS

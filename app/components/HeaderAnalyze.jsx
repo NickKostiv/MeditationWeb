@@ -109,7 +109,7 @@ const HeaderAnalyze = ({ onBack, currentStep }) => {
             </li>
             <li>
               <Link
-                href="/TOS"
+                href="/Terms"
                 className="hover:opacity-75 text-[24px] md:text-[24px] font-semibold tracking-[0.5px]"
                 onClick={() => setIsMenuOpen(false)}>
                 Terms of Services

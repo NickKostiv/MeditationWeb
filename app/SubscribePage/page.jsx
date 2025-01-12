@@ -309,19 +309,19 @@ export default function page() {
         </div>
         <div className="flex justify-start items-center mt-4">
           <Link
-            href="/terms"
+            href="/Terms"
             className="text-[#5F6364] text-[12px] underline font-sans mx-2">
             Terms & Conditions
           </Link>
 
           <Link
-            href="/privacy"
+            href="/Privacy"
             className="text-[#5F6364] text-[12px] underline font-sans mx-2">
             Privacy Policy
           </Link>
           <p className="text-[12px] text-gray-400">and</p>
           <Link
-            href="/privacy"
+            href="/Refund"
             className="text-[#5F6364] text-[12px] underline font-sans mx-2">
             Refund Policy
           </Link>

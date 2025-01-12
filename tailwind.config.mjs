@@ -20,6 +20,7 @@ export default {
           "radial-gradient(circle at 50% 57%, #000 -3%, #46c0dbcc 0, #000 13%)",
       },
       fontFamily: {
+        geometria: ['"Geometria"', ...defaultTheme.fontFamily.sans],
         montserrat: ["var(--font-montserrat)", "Arial", "sans-serif"],
         sans: [
           '"Open Sans"',
