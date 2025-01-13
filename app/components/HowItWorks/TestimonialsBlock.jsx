@@ -91,7 +91,7 @@ export default function TestimonialsBlock() {
       {testimonialsData.map((testimonial, index) => (
         <div
           key={index}
-          className="flex flex-col sm:flex-row bg-[#2C2F33] text-white rounded-[21px] p-6 shadow-md">
+          className="flex flex-col sm:flex-row items-center justify-center md:items-start md:justify-start bg-[#2C2F33] text-white rounded-[21px] p-[30px] shadow-md">
           <Image
             src={testimonial.avatar}
             alt={testimonial.name}
@@ -99,16 +99,15 @@ export default function TestimonialsBlock() {
           />
           {/* Контент */}
           <div className="flex flex-col">
-            <h3 className="text-lg font-bold mb-[20px]">{testimonial.title}</h3>
-            <p className="text-[15px] font-thin mb-[50px]">
+            <h3 className="text-lg font-bold mb-[20px] ">
+              {testimonial.title}
+            </h3>
+            <p className="text-[15px] font-thin mb-[20px] md:mb-[50px]">
               {testimonial.content}
             </p>
             <div className="flex items-center">
-              <div className="text-yellow-500 text-[16px] mr-[10px]">
-                ⭐⭐⭐⭐⭐
-              </div>
-              <span className=" text-white text-[18px]">
-                By {testimonial.name}, {testimonial.platform}
+              <span className=" text-white text-[16px]">
+                ⭐⭐⭐⭐⭐ By {testimonial.name}, {testimonial.platform}
               </span>
             </div>
           </div>

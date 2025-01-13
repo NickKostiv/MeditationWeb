@@ -30,7 +30,7 @@ const Header2 = () => {
   return (
     <header className="font-geometria w-full bg-black">
       {/* Верхній хедер */}
-      <div className="flex items-center w-full py-[20px] px-6">
+      <div className="flex items-center w-full py-[20px] px-[5px] sm:px-6">
         {/* Лого */}
         <div className="flex-shrink-0">
           <Link href="/">
@@ -75,12 +75,12 @@ const Header2 = () => {
 
         {/* Пошук */}
         {isSearchOpen ? (
-          <div className="flex items-center justify-between w-[60%] px-4">
+          <div className="flex items-center justify-between w-full max-w-[800px] px-4">
             <div className="flex-shrink-0"></div>
             <input
               type="text"
               placeholder="Search ..."
-              className="flex-grow bg-black text-white px-4 py-2 text-lg border-b-[1px] border-white outline-none"
+              className="flex-grow bg-black text-white px-4 py-2 text-lg outline-none"
             />
             <button
               aria-label="Close Search"
@@ -115,24 +115,26 @@ const Header2 = () => {
               />
             </button>
           )}
-          <button
-            className="text-[#27E2EF] focus:outline-none"
-            aria-label="Toggle Menu"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
-          </button>
+          {!isSearchOpen && (
+            <button
+              className="text-[#27E2EF] focus:outline-none"
+              aria-label="Toggle Menu"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+          )}
         </div>
       </div>
 
