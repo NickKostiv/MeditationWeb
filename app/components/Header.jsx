@@ -66,7 +66,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              href="/blog"
+              href="/BlogPage"
               className="hover:opacity-75 text-[10px] font-normal tracking-[3px]">
               BLOG
             </Link>
@@ -130,7 +130,7 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href="/blog"
+                href="/BlogPage"
                 className="hover:opacity-75 text-[10px] font-normal tracking-[3px]"
                 onClick={() => setIsMenuOpen(false)}>
                 BLOG

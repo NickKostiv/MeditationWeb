@@ -33,7 +33,7 @@ export default function page() {
           </div>
           <Link
             href="/QuizPage"
-            className="flex items-center bg-white justify-center text-center mt-[15px] py-[8px] px-[30px] border-[2px] border-white hover:bg-gray-400 hover:bg-opacity-45 hover:border-transparent transition-all duration-300 rounded-[21px] relative group">
+            className="flex items-center bg-white justify-center text-center mt-[15px] py-[8px] px-[30px] border-[2px] border-white hover:bg-gray-300 hover:border-transparent transition-all duration-300 rounded-[21px] relative group">
             <span className="text-black text-[14px] font-bold">
               About Slowdive
             </span>
