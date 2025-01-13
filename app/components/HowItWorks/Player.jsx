@@ -60,7 +60,7 @@ const AudioPlayer = () => {
       <img
         src="https://blog.slowdive.app/wp-content/uploads/2024/02/deepest_healing_frequency_5.png"
         alt="Audio Thumbnail"
-        className="w-full sm:max-w-[220px] mr-auto h-full object-cover "
+        className="w-full sm:max-w-[220px] mr-auto h-full object-cover md:rounded-l-[24px]"
       />
 
       {/* Аудіо деталі */}
