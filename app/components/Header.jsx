@@ -59,7 +59,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              href="/support"
+              href="/SupportPage"
               className="hover:opacity-75 text-[10px] font-normal tracking-[3px]">
               SUPPORT
             </Link>
@@ -122,7 +122,7 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href="/support"
+                href="/SupportPage"
                 className="hover:opacity-75 text-[10px] font-normal tracking-[3px]"
                 onClick={() => setIsMenuOpen(false)}>
                 SUPPORT

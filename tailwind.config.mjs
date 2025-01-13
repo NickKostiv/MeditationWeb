@@ -18,6 +18,7 @@ export default {
           "linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.1) 45%, #030813)",
         "pay-gradient":
           "radial-gradient(circle at 50% 57%, #000 -3%, #46c0dbcc 0, #000 13%)",
+        "blog-title-gradient": "linear-gradient(94deg, #fff 20%, #27e2ef 40%)",
       },
       fontFamily: {
         geometria: ['"Geometria"', ...defaultTheme.fontFamily.sans],
