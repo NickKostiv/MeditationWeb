@@ -101,7 +101,7 @@ const HeaderAnalyze = ({ onBack, currentStep }) => {
           <ul className="flex flex-col space-y-4 text-lg pt-[90px] px-[25px]">
             <li>
               <Link
-                href="/MainPage"
+                href="/ContactUsPage"
                 className="hover:opacity-75 text-[24px] md:text-[24px] font-semibold tracking-[0.5px]"
                 onClick={() => setIsMenuOpen(false)}>
                 Contact Us
